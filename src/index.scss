@@ -1,8 +1,18 @@
+@import-normalize; 
+@import './vars';
+
+// Theme
+
+:root {
+  --color-bg-1: #fefefe;
+}
+
+// Global Style
+
 body {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: $font-family-1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
