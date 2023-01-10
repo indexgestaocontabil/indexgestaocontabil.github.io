@@ -36,14 +36,14 @@
 
         &-overlay {
             background: var(--menu-overlay-bg);
-            height: 100vh;
-            width: calc(100vw - #{$menu-width});
+            height: var(--window-height);
+            width: calc(var(--window-width) - #{$menu-width});
         }
 
         &-content {
             @extend %df-fdc-jcc-aife;
 
-            height: 100vh;
+            height: var(--window-height);
             width: $menu-width;
             background: var(--theme-color-1);
 
