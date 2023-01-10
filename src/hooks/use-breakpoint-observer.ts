@@ -1,28 +1,41 @@
-import { useCallback, useEffect, useRef } from "react";
+import { useLayoutEffect, useState } from "react";
 
-const IS_DESKTOP = '(min-width: 680px)';
-const IS_MOBILE = '(max-width: 680px)';
+const BREAKPOINT_MOBILE_TO_DESKTOP = 680;
+
+const checkDesktopBreakpoint = () => window.innerWidth > BREAKPOINT_MOBILE_TO_DESKTOP;
+
+const checkMobileBreakpoint = () => window.innerWidth <= BREAKPOINT_MOBILE_TO_DESKTOP;
 
 const useBreakpointObserver = () => {
-  const isMobile = useRef<boolean>(window.matchMedia(IS_MOBILE).matches);
-  const isDesktop = useRef<boolean>(window.matchMedia(IS_DESKTOP).matches);
+  const [isMobile, setIsMobile] = useState<boolean>(checkMobileBreakpoint());
+  const [isDesktop, setIsDesktop] = useState<boolean>(checkDesktopBreakpoint());
 
-  const calculateBreakpoints = useCallback(() => {
-    isMobile.current = window.matchMedia(IS_MOBILE).matches;
-    isDesktop.current = window.matchMedia(IS_DESKTOP).matches;
-  }, []);
+  useLayoutEffect(() => {
+    function handleResize() {
+      const newMobileStatus = checkMobileBreakpoint();
+      if (newMobileStatus !== isMobile) {
+        setIsMobile(newMobileStatus);
+      }
 
-  useEffect(() => {
-    window.addEventListener('resize', calculateBreakpoints);
-
-    return () => {
-      window.removeEventListener('resize', calculateBreakpoints);
+      const newDesktopStatus = checkDesktopBreakpoint();
+      if (newDesktopStatus !== isDesktop) {
+        setIsDesktop(newDesktopStatus);
+      }
     }
-  }, [calculateBreakpoints])
+
+    // First Execution
+    handleResize();
+
+    // Start Watching
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isDesktop, isMobile])
 
   return {
-    isMobile: isMobile.current,
-    isDesktop: isDesktop.current
+    isMobile,
+    isDesktop
   }
 };
 
