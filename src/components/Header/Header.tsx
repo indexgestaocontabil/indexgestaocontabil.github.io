@@ -12,19 +12,17 @@ function Header() {
   const getNavigationItems = useCallback(() => {
     const routes = getRouteDefinitions();
 
-    return (
-      routes.map(({ path, title }, index) => (
-        <NavLink
-          to={path}
-          key={`${path}-${index}`}
-          className={({ isActive }) =>
-            'header-navigation-link ' + (isActive ? 'active' : '')
-          }
-        >
-          {title}
-        </NavLink>
-      ))
-    )
+    return routes.map(({ path, title }, index) => (
+      <NavLink
+        to={path}
+        key={`${path}-${index}`}
+        className={({ isActive }) =>
+          'header-navigation-link ' + (isActive ? 'active' : '')
+        }
+      >
+        {title}
+      </NavLink>
+    ));
   }, []);
 
   return (
@@ -40,14 +38,11 @@ function Header() {
       </div>
 
       <nav className="header-navigation">
-        { isDesktop 
-            ? getNavigationItems() 
-            : (
-              <BurgerMenu>
-                {getNavigationItems()} 
-              </BurgerMenu>
-            )
-        }
+        {isDesktop ? (
+          getNavigationItems()
+        ) : (
+          <BurgerMenu>{getNavigationItems()}</BurgerMenu>
+        )}
       </nav>
     </header>
   );

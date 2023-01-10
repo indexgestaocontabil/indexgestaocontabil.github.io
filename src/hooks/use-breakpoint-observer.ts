@@ -1,10 +1,12 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useState } from 'react';
 
 const BREAKPOINT_MOBILE_TO_DESKTOP = 680;
 
-const checkDesktopBreakpoint = () => window.innerWidth > BREAKPOINT_MOBILE_TO_DESKTOP;
+const checkDesktopBreakpoint = () =>
+  window.innerWidth > BREAKPOINT_MOBILE_TO_DESKTOP;
 
-const checkMobileBreakpoint = () => window.innerWidth <= BREAKPOINT_MOBILE_TO_DESKTOP;
+const checkMobileBreakpoint = () =>
+  window.innerWidth <= BREAKPOINT_MOBILE_TO_DESKTOP;
 
 const useBreakpointObserver = () => {
   const [isMobile, setIsMobile] = useState<boolean>(checkMobileBreakpoint());
@@ -31,12 +33,12 @@ const useBreakpointObserver = () => {
 
     // Cleanup
     return () => window.removeEventListener('resize', handleResize);
-  }, [isDesktop, isMobile])
+  }, [isDesktop, isMobile]);
 
   return {
     isMobile,
-    isDesktop
-  }
+    isDesktop,
+  };
 };
 
 export default useBreakpointObserver;
