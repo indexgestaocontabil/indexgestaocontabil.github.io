@@ -1,18 +1,68 @@
-.menu-trigger {
-    $size: 48px;
+@import '../../placeholders';
+@import '../../vars';
 
-    width: $size;
-    height: $size;
-    border-radius: 100%;
-    border: none;
-    background-color: var(--menu-opener-bg);
-    overflow: hidden;
+.menu-mobile {
+    &-trigger {
+        $size: 48px;
 
-    &-ripple {
+        width: $size;
+        height: $size;
         border-radius: 100%;
+        border: none;
+        background-color: var(--menu-opener-bg);
+        overflow: hidden;
+
+        &-ripple {
+            border-radius: 100%;
+        }
+
+        &-icon {
+            fill: var(--menu-opener-icon);
+        }
     }
 
-    &-icon {
-        fill: var(--menu-opener-icon);
+    &-opened {
+        $menu-width: 220px;
+
+        &-container {
+            @extend %df-aic-jcc;
+
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        &-overlay {
+            background: var(--menu-overlay-bg);
+            height: 100vh;
+            width: calc(100vw - #{$menu-width});
+        }
+
+        &-content {
+            @extend %df-fdc-jcc-aife;
+
+            height: 100vh;
+            width: $menu-width;
+            background: var(--theme-color-1);
+
+            &-links {
+                @extend %df-fdc-jcc-aife;
+                margin-bottom: auto;
+            }
+
+            .header-navigation-link {
+                font-size: $font-size-2;
+                margin-bottom: $base-spacing-large * 1.5;
+                padding-right: $side-padding-mobile;
+            }
+
+            .menu-mobile-opener {
+                margin-top: 16px;
+                margin-right: $side-padding-mobile;
+                margin-bottom: auto;
+            }
+        }
     }
 }

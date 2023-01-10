@@ -3,3 +3,16 @@
     align-items: center;
     justify-content: space-between;
 }
+
+%df-aic-jcc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%df-fdc-jcc-aife {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}

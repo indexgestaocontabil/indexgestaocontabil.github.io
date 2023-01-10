@@ -11,14 +11,19 @@
 
   --menu-opener-bg: #0971C3; 
   --menu-opener-icon: #fff; 
+
+  --menu-overlay-bg: rgba(30, 30, 30, .4);
 }
 
 // Global Style
 
 body {
-  box-sizing: border-box;
   margin: 0;
   font-family: $font-family-1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &, & *, & * * {
+    box-sizing: border-box;
+  }
 }
