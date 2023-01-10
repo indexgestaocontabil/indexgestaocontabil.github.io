@@ -8,14 +8,15 @@ function Header() {
 
   return (
     <nav>
-      {routes.map(({path, title}, index) => 
-        <NavLink 
+      {routes.map(({ path, title }, index) => (
+        <NavLink
           to={path}
           key={`${path}-${index}`}
-          className={({ isActive }) => (isActive ? 'active' : '')}>
-            {title}
-          </NavLink>
-        )}
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          {title}
+        </NavLink>
+      ))}
     </nav>
   );
 }
