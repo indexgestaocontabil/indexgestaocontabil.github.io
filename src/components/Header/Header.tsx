@@ -4,20 +4,20 @@ import { getRouteDefinitions } from '../../routes';
 import './Header.scss';
 
 function Header() {
-    const routes = getRouteDefinitions();
+  const routes = getRouteDefinitions();
 
-    return (
-        <nav>
-            {routes.map(({path, title}, index) => 
-                <NavLink 
-                    key={`${path}-${index}`}
-                    className={({ isActive }) => (isActive ? 'active' : '')} 
-                    to={path}>
-                    {title}
-                </NavLink>
-            )}
-        </nav>
-    );
+  return (
+    <nav>
+      {routes.map(({path, title}, index) => 
+        <NavLink 
+          to={path}
+          key={`${path}-${index}`}
+          className={({ isActive }) => (isActive ? 'active' : '')}>
+            {title}
+          </NavLink>
+        )}
+    </nav>
+  );
 }
 
 export default Header;
