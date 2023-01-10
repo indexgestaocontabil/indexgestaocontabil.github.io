@@ -4,6 +4,7 @@ import './Header.scss';
 import logo from '../../assets/img/logo-small-amarela.png';
 import useBreakpointObserver from '../../hooks/use-breakpoint-observer';
 import { useCallback } from 'react';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 function Header() {
   const { isDesktop } = useBreakpointObserver();
@@ -42,7 +43,9 @@ function Header() {
         { isDesktop 
             ? getNavigationItems() 
             : (
-              <h1>mobile</h1>
+              <BurgerMenu>
+                {getNavigationItems()} 
+              </BurgerMenu>
             )
         }
       </nav>

@@ -1,0 +1,18 @@
+.menu-trigger {
+    $size: 48px;
+
+    width: $size;
+    height: $size;
+    border-radius: 100%;
+    border: none;
+    background-color: var(--menu-opener-bg);
+    overflow: hidden;
+
+    &-ripple {
+        border-radius: 100%;
+    }
+
+    &-icon {
+        fill: var(--menu-opener-icon);
+    }
+}
