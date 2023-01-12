@@ -1,8 +1,14 @@
 import React from 'react';
 import './HomePage.scss';
+import Slides from './Slides/Slides';
 
 function HomePage() {
-  return <h1>Home Page</h1>;
+  return (
+    <>
+      <Slides />
+      <h1>Home Page</h1>
+    </>
+  );
 }
 
 export default HomePage;
