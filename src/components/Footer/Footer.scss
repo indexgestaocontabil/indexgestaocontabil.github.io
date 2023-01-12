@@ -3,10 +3,10 @@
 
 .footer {
     background: var(--theme-color-1);
-    padding: 0 $side-padding-desktop;
+    padding: 12px $side-padding-desktop;
     height: $footer-height;
 
     @media #{$breakpoint-mobile} {
-        padding: 0 $side-padding-mobile;
+        padding: 12px $side-padding-mobile;
     }
 }

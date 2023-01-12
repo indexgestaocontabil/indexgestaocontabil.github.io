@@ -1,0 +1,38 @@
+@import '../../placeholders';
+@import '../../vars';
+
+.action-link {
+    $action-link-color: var(--action-link-color-1);
+    $action-link-hover: var(--action-link-color-2);
+
+    display: inline-block;
+
+    &-icon {
+        fill: $action-link-color;
+    }
+
+    &-text {
+        @extend %dif-aic-jcfs;
+
+        color: $action-link-color;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: $font-size-3;
+
+        &:visited {
+            color: $action-link-color;
+        }
+    }
+
+    &:hover {
+        .action-link {
+            &-icon {
+                fill: $action-link-hover;
+            }
+
+            &-text {
+                color: $action-link-hover;
+            }
+        }
+    }
+}
