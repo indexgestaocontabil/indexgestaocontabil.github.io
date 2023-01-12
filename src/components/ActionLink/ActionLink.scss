@@ -11,17 +11,20 @@
         fill: $action-link-color;
     }
 
-    &-text {
+    &-wrapper {
         @extend %dif-aic-jcfs;
 
         color: $action-link-color;
         text-decoration: none;
-        font-weight: 600;
-        font-size: $font-size-3;
 
         &:visited {
             color: $action-link-color;
         }
+    }
+
+    &-text {
+        font-weight: 600;
+        padding-left: 8px;
     }
 
     &:hover {
@@ -30,7 +33,7 @@
                 fill: $action-link-hover;
             }
 
-            &-text {
+            &-wrapper {
                 color: $action-link-hover;
             }
         }

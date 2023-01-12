@@ -2,11 +2,25 @@
 @import '../../placeholders';
 
 .footer {
-    background: var(--theme-color-1);
+    @extend %df-aic-jsb;
+    
+    background-color: var(--theme-color-1);
+    background-image: url('../../assets/img/wave.png');
+    background-size: 100% $footer-height;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 12px $side-padding-desktop;
-    height: $footer-height;
+    min-height: $footer-height;
 
     @media #{$breakpoint-mobile} {
         padding: 12px $side-padding-mobile;
+    }
+
+    &-contacts {
+        @extend %df-fdc-jcc-aifs;
+
+        .action-link:not(:last-child) {
+            margin-bottom: 8px;
+        }
     }
 }

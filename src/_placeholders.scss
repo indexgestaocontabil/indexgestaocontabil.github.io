@@ -17,6 +17,13 @@
     align-items: flex-end;
 }
 
+%df-fdc-jcc-aifs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 %dif-aic-jcfs {
     display: inline-flex;
     align-items: center;

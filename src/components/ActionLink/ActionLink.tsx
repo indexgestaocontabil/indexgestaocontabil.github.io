@@ -3,17 +3,20 @@ import { IconType } from '../../types';
 import './ActionLink.scss';
 
 type PropsType = {
-  Icon?: IconType;
   label: string;
   link: string;
+  Icon?: IconType;
+  size?: number;
 };
 
-function ActionLink({Icon, label, link}: PropsType) {
+function ActionLink({Icon, label, link, size}: PropsType) {
+  const fontSize = `${size || 14}px`;
+  
   return (
     <div className="action-link">
-      <a href={link} className="action-link-text" target="_blank" rel="noreferrer">
-        {Icon && <Icon size={'20px'} className='action-link-icon'/>}
-        {label}
+      <a href={link} className="action-link-wrapper" target="_blank" rel="noreferrer">
+        {Icon && <Icon size={fontSize} className='action-link-icon'/>}
+        <span className='action-link-text' style={{fontSize}}>{label}</span>
       </a>
     </div>
   )
