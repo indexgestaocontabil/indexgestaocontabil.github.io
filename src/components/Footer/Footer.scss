@@ -1,0 +1,12 @@
+@import '../../vars';
+@import '../../placeholders';
+
+.footer {
+    background: var(--theme-color-1);
+    padding: 0 $side-padding-desktop;
+    height: $footer-height;
+
+    @media #{$breakpoint-mobile} {
+        padding: 0 $side-padding-mobile;
+    }
+}

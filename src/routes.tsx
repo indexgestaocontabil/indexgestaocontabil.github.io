@@ -4,6 +4,7 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import ContactPage from './pages/ContactPage/ContactPage';
 import HomePage from './pages/HomePage/HomePage';
@@ -45,16 +46,17 @@ export default function AppRouter() {
   const routes = getRouteDefinitions();
 
   return (
-    <main className="container">
-      <Router>
-        <Header />
+    <Router>
+      <Header />
+      <main className="container">
         <Routes>
           {routes.map(({ path, ReactComponent }) => (
             <Route key={path} path={path} element={ReactComponent} />
           ))}
           <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
-      </Router>
-    </main>
+      </main>
+      <Footer />
+    </Router>
   );
 }

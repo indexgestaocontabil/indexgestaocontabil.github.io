@@ -30,3 +30,7 @@ body {
     box-sizing: border-box;
   }
 }
+
+.container {
+  min-height: calc(var(--window-height) - #{$header-height + $footer-height})
+}
