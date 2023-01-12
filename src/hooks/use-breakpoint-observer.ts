@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from 'react';
 
-const BREAKPOINT_MOBILE_TO_DESKTOP = 680;
+const BREAKPOINT_MOBILE_TO_DESKTOP = 768;
 
 const checkDesktopBreakpoint = () =>
   window.innerWidth > BREAKPOINT_MOBILE_TO_DESKTOP;
