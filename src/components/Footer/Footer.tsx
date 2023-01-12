@@ -19,13 +19,13 @@ function Footer() {
 
         <ActionLink 
           Icon={MdPhone}
-          label="(71) 98691-3116"
-          link="tel:71986913116" />
+          label="(71) 98739-0348"
+          link="https://wa.me/71987390348" />
 
         <ActionLink 
           Icon={MdPhone}
-          label="(71) 98830-1015"
-          link="tel:71988301015" />
+          label="(71) 99273-8464"
+          link="https://wa.me/71992738464" />
       </div>
     </footer>
   )
