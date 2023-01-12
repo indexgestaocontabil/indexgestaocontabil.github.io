@@ -13,7 +13,7 @@ function Slides() {
     <Swiper
         slidesPerView={1}
         grabCursor={true}
-        autoplay={{delay: 3000, pauseOnMouseEnter: true}}
+        autoplay={{delay: 3000}}
         pagination={{clickable: true}}
         className="swiper-wrapper"
       >
