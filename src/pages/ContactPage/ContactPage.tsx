@@ -4,6 +4,7 @@ import { PARAMS, REGEX } from '../../globals';
 import { getWhatsAppLink } from '../../utils/utilitary-functions';
 import './ContactPage.scss';
 import Ripples from 'react-ripples';
+import Title from '../../components/Title/Title';
 
 type FormType = {
   name?: string;
@@ -70,6 +71,8 @@ function ContactPage() {
 
   return (
     <div className='contact-wrapper'>
+      <Title text="Contato" />
+      
       <Formik
         initialValues={initialPayload}
         validate={onFormikValidate}
