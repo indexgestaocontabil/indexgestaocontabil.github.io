@@ -71,8 +71,8 @@ function ContactPage() {
 
   return (
     <div className='contact-wrapper'>
-      <Title text="Contato" />
-      
+      <Title content="Contato" />
+
       <Formik
         initialValues={initialPayload}
         validate={onFormikValidate}
