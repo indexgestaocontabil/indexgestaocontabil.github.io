@@ -98,12 +98,16 @@ function ContactPage() {
             () => {
               const [firstName] = (values.name || '').split(' ');
               const parsedFirstName = firstName ? `, ${firstName}` : '';
-              triggerSnackbar(`Mensagem enviada com sucesso! Em breve entraremos em contato com você${parsedFirstName}.`);
+              triggerSnackbar(
+                `Mensagem enviada com sucesso! Em breve entraremos em contato com você${parsedFirstName}.`
+              );
               setSubmitting(false);
               resetForm();
             },
             () => {
-              triggerSnackbar('Oops, não conseguimos enviar sua mensagem! Por favor, tente novamente mais tarde ou tente falar conosco via e-mail ou Telefone/WhatsApp.');
+              triggerSnackbar(
+                'Oops, não conseguimos enviar sua mensagem! Por favor, tente novamente mais tarde ou tente falar conosco via e-mail ou Telefone/WhatsApp.'
+              );
             }
           );
         }}

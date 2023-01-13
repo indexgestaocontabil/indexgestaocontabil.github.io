@@ -10,7 +10,7 @@ if (rootCssVars) {
   // Whenever window resizes, css vars are updated.
   // This is important because properties like vh doesn't consider browser UI, only the screen size on iPhones
   window.addEventListener('resize', () => {
-    const {innerHeight, innerWidth} = window;
+    const { innerHeight, innerWidth } = window;
 
     rootCssVars?.style.setProperty('--window-height', `${innerHeight}px`);
     rootCssVars?.style.setProperty('--window-width', `${innerWidth}px`);

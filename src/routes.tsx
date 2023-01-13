@@ -49,11 +49,12 @@ export default function AppRouter() {
 
   return (
     <Router>
-      <SnackbarProvider 
+      <SnackbarProvider
         dense={VIEWPORT.IS_MOBILE}
-        anchorOrigin={{vertical: 'top', horizontal: 'center'}}
-        className='custom-snackbar-item'
-        maxSnack={3}>
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        className="custom-snackbar-item"
+        maxSnack={3}
+      >
         <Header />
         <main className="container">
           <Routes>
