@@ -1,6 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React from 'react';
-import { REGEX } from '../../globals';
+import { PARAMS, REGEX } from '../../globals';
 import { getWhatsAppLink } from '../../utils/utilitary-functions';
 import './ContactPage.scss';
 import Ripples from 'react-ripples';
@@ -121,7 +121,7 @@ function ContactPage() {
             </div>
 
             <Ripples
-              color="rgba(255, 255, 255, .3)"
+              color={PARAMS.RIPPLES_COLOR}
               className="submit-button-ripples"
             >
               <button 

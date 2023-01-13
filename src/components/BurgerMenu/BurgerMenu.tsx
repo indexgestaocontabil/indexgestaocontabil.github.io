@@ -6,6 +6,7 @@ import { MdMenu, MdClose } from 'react-icons/md';
 import Ripples from 'react-ripples';
 import useToggle from '../../hooks/use-toggle';
 import { useLocation } from 'react-router-dom';
+import { PARAMS } from '../../globals';
 
 type PropsType = {
   children: React.ReactNode;
@@ -24,7 +25,7 @@ function BurgerMenu({ children }: PropsType) {
   function renderButton(Icon: ValidIconType, callback: () => void) {
     return (
       <Ripples
-        color="rgba(255, 255, 255, .3)"
+        color={PARAMS.RIPPLES_COLOR}
         className="menu-mobile-trigger-ripple menu-mobile-opener"
       >
         <button

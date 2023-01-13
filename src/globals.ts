@@ -1,3 +1,7 @@
+export const PARAMS = {
+  RIPPLES_COLOR: 'rgba(255, 255, 255, .3)'
+}
+
 export const ACCOUNTS = {
   email: 'indexcontabilidade@outlook.com',
   instagram: 'indexgestaocontabil'
