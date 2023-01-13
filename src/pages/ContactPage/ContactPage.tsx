@@ -70,7 +70,7 @@ function ContactPage() {
   }
 
   return (
-    <div className='contact-wrapper'>
+    <div className='content-wrapper'>
       <Title content="Contato" />
 
       <Formik

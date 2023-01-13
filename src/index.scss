@@ -42,3 +42,21 @@ body {
 .container {
   min-height: calc(var(--window-height) - #{$header-height + $footer-height})
 }
+
+.content-wrapper {
+  $vpadding: 24px;
+  padding: $vpadding $side-padding-desktop;
+
+  @media #{$breakpoint-mobile} {
+      padding: $vpadding $side-padding-mobile;
+  }
+}
+
+.content-wrapper-no-vp {
+  $vpadding: 0px;
+  padding: $vpadding $side-padding-desktop;
+
+  @media #{$breakpoint-mobile} {
+      padding: $vpadding $side-padding-mobile;
+  }
+}

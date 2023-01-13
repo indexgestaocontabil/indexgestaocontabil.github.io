@@ -1,15 +1,6 @@
 @import '../../placeholders';
 @import '../../vars';
 
-.contact-wrapper {
-    $vpadding: 24px;
-    padding: $vpadding $side-padding-desktop;
-
-    @media #{$breakpoint-mobile} {
-        padding: $vpadding $side-padding-mobile;
-    }
-}
-
 .submit-button {
     $submit-background-color: var(--theme-color-3);
     $submit-color: var(--theme-color-4);
