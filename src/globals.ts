@@ -5,8 +5,8 @@ export const PARAMS = {
 };
 
 export const ACCOUNTS = {
-  email: 'hugodeiro@gmail.com',
-  // email: 'indexcontabilidade@outlook.com',
+  // email: 'hugodeiro@gmail.com',
+  email: 'indexcontabilidade@outlook.com',
   instagram: 'indexgestaocontabil',
 };
 
