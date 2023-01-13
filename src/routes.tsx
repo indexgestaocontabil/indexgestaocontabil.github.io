@@ -1,3 +1,4 @@
+import { SnackbarProvider } from 'notistack';
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,6 +7,7 @@ import {
 } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import { VIEWPORT } from './globals';
 import ContactPage from './pages/ContactPage/ContactPage';
 import HomePage from './pages/HomePage/HomePage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
@@ -47,16 +49,22 @@ export default function AppRouter() {
 
   return (
     <Router>
-      <Header />
-      <main className="container">
-        <Routes>
-          {routes.map(({ path, ReactComponent }) => (
-            <Route key={path} path={path} element={ReactComponent} />
-          ))}
-          <Route path="*" element={<Navigate replace to="/" />} />
-        </Routes>
-      </main>
-      <Footer />
+      <SnackbarProvider 
+        dense={VIEWPORT.IS_MOBILE}
+        anchorOrigin={{vertical: 'top', horizontal: 'center'}}
+        className='custom-snackbar-item'
+        maxSnack={3}>
+        <Header />
+        <main className="container">
+          <Routes>
+            {routes.map(({ path, ReactComponent }) => (
+              <Route key={path} path={path} element={ReactComponent} />
+            ))}
+            <Route path="*" element={<Navigate replace to="/" />} />
+          </Routes>
+        </main>
+        <Footer />
+      </SnackbarProvider>
     </Router>
   );
 }

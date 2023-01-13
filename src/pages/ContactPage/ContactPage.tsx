@@ -5,6 +5,7 @@ import { getWhatsAppLink } from '../../utils/utilitary-functions';
 import './ContactPage.scss';
 import Ripples from 'react-ripples';
 import Title from '../../components/Title/Title';
+import useCustomSnackbar from '../../hooks/use-custom-snackbar';
 
 type FormType = {
   name?: string;
@@ -13,7 +14,16 @@ type FormType = {
   message?: string;
 };
 
+const initialPayload: FormType = {
+  name: '',
+  email: '',
+  phone: '',
+  message: '',
+};
+
 function ContactPage() {
+  const triggerSnackbar = useCustomSnackbar();
+
   const sendToFormSubmit = (
     body: string,
     successCallback?: VoidFunction,
@@ -29,13 +39,6 @@ function ContactPage() {
     })
       .then(() => successCallback && successCallback())
       .catch(() => errorCallback && errorCallback());
-  };
-
-  const initialPayload: FormType = {
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
   };
 
   const onFormikValidate = (values: FormType) => {
@@ -78,11 +81,11 @@ function ContactPage() {
       <Formik
         initialValues={initialPayload}
         validate={onFormikValidate}
-        onSubmit={(values: FormType, { setSubmitting }) => {
+        onSubmit={(values: FormType, { setSubmitting, resetForm }) => {
           const phone = values.phone
-            ? `${values.phone} (Link para Whatsapp: ${getWhatsAppLink(
+            ? `${values.phone} \n\tLink para Whatsapp: ${getWhatsAppLink(
                 values.phone
-              )})`
+              )}`
             : '';
 
           sendToFormSubmit(
@@ -92,7 +95,16 @@ function ContactPage() {
               'Telefone / WhatsApp': phone,
               Mensagem: values.message,
             }),
-            () => setSubmitting(false)
+            () => {
+              const [firstName] = (values.name || '').split(' ');
+              const parsedFirstName = firstName ? `, ${firstName}` : '';
+              triggerSnackbar(`Mensagem enviada com sucesso! Em breve entraremos em contato com você${parsedFirstName}.`);
+              setSubmitting(false);
+              resetForm();
+            },
+            () => {
+              triggerSnackbar('Oops, não conseguimos enviar sua mensagem! Por favor, tente novamente mais tarde ou tente falar conosco via e-mail ou Telefone/WhatsApp.');
+            }
           );
         }}
       >

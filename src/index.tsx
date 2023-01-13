@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { MOBILE_BREAKPOINT, VIEWPORT } from './globals';
 import './index.scss';
 import AppRouter from './routes';
 
@@ -9,11 +10,13 @@ if (rootCssVars) {
   // Whenever window resizes, css vars are updated.
   // This is important because properties like vh doesn't consider browser UI, only the screen size on iPhones
   window.addEventListener('resize', () => {
-    rootCssVars?.style.setProperty(
-      '--window-height',
-      `${window.innerHeight}px`
-    );
-    rootCssVars?.style.setProperty('--window-width', `${window.innerWidth}px`);
+    const {innerHeight, innerWidth} = window;
+
+    rootCssVars?.style.setProperty('--window-height', `${innerHeight}px`);
+    rootCssVars?.style.setProperty('--window-width', `${innerWidth}px`);
+
+    VIEWPORT.IS_MOBILE = innerWidth <= MOBILE_BREAKPOINT;
+    VIEWPORT.IS_DESKTOP = !VIEWPORT.IS_MOBILE;
   });
 
   // Triggers first resize event (onload)

@@ -1,5 +1,6 @@
 @import-normalize; 
 @import './vars';
+@import './placeholders';
 
 // Theme
 
@@ -10,6 +11,7 @@
   --theme-color-2: #EEF100;
   --theme-color-3: #0971C3;
   --theme-color-4: #fff;
+  --theme-color-5: rgb(9, 113, 195, .7);
 
   --menu-opener-bg: #0971C3; 
   --menu-opener-icon: #fff; 
@@ -24,6 +26,11 @@
 
   --input-text-color: #333;
   --color-error: #DD3444;
+
+  --snackbar-background: rgb(9, 113, 195, .9);
+  --snackbar-close-background: #0D1A6C;
+  --snackbar-close-fill: #fff;
+  --snackbar-close-text: #fff;
 }
 
 // Global Style
@@ -58,5 +65,38 @@ body {
 
   @media #{$breakpoint-mobile} {
       padding: $vpadding $side-padding-mobile;
+  }
+}
+
+.custom-snackbar{
+  &-close {
+    $size: 32px;
+
+    @extend %df-aic-jcc;
+    
+    background: var(--snackbar-close-background);
+    border: none;
+    border-radius: 100%;
+    height: $size;
+    width: $size;
+
+    &-icon {
+      fill: var(--snackbar-close-fill);
+    }
+  }
+
+  &-message {
+    font-family: $font-family-1;
+    font-size: $font-size-1;
+    color: var(--snackbar-close-text);
+  }
+
+  &-item {
+    background-color: var(--snackbar-background) !important;
+
+    #notistack-snackbar {
+      @extend %df-aic-jsb;
+      width: 100%;
+    }
   }
 }
