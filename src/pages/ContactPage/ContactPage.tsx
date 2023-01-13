@@ -8,33 +8,34 @@ import Title from '../../components/Title/Title';
 
 type FormType = {
   name?: string;
-  email?: string; 
-  phone?: string; 
-  message?: string; 
+  email?: string;
+  phone?: string;
+  message?: string;
 };
 
 function ContactPage() {
   const sendToFormSubmit = (
-    body: string, 
-    successCallback?: VoidFunction, 
+    body: string,
+    successCallback?: VoidFunction,
     errorCallback?: VoidFunction
   ) => {
     fetch('https://formsubmit.co/ajax/hugodeiro@gmail.com', {
       method: 'POST',
       body,
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    }).then(() => successCallback && successCallback())
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(() => successCallback && successCallback())
       .catch(() => errorCallback && errorCallback());
-  }
+  };
 
-  const initialPayload: FormType = { 
-    name: '', 
-    email: '', 
-    phone: '', 
-    message: '' 
+  const initialPayload: FormType = {
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
   };
 
   const onFormikValidate = (values: FormType) => {
@@ -55,7 +56,8 @@ function ContactPage() {
     // Validar telefone
     if (values.phone) {
       if (isNaN(Number(values.phone))) {
-        errors.phone = 'Telefone deve ser composto apenas por valores numéricos!';
+        errors.phone =
+          'Telefone deve ser composto apenas por valores numéricos!';
       } else if (![10, 11].includes(values.phone.length)) {
         errors.phone = 'Telefones devem ter entre 10 e 11 caracteres';
       }
@@ -67,18 +69,20 @@ function ContactPage() {
     }
 
     return errors;
-  }
+  };
 
   return (
-    <div className='content-wrapper'>
+    <div className="content-wrapper">
       <Title content="Contato" />
 
       <Formik
         initialValues={initialPayload}
         validate={onFormikValidate}
         onSubmit={(values: FormType, { setSubmitting }) => {
-          const phone = values.phone 
-            ? `${values.phone} (Link para Whatsapp: ${getWhatsAppLink(values.phone)})`
+          const phone = values.phone
+            ? `${values.phone} (Link para Whatsapp: ${getWhatsAppLink(
+                values.phone
+              )})`
             : '';
 
           sendToFormSubmit(
@@ -86,51 +90,86 @@ function ContactPage() {
               Nome: values.name,
               'E-mail': values.email,
               'Telefone / WhatsApp': phone,
-              Mensagem: values.message
-            }), 
+              Mensagem: values.message,
+            }),
             () => setSubmitting(false)
           );
         }}
       >
         {({ isSubmitting, dirty, isValid }) => (
-          <Form className='input-field-form'>
-            <div className='input-field'>
-              <label htmlFor="name" className='input-field-label'>Nome*</label>
-              <Field type="text" name="name" className='input-field-content'/>
-              <ErrorMessage name="name" component="div" className='input-field-error' />
+          <Form className="input-field-form">
+            <div className="input-field">
+              <label htmlFor="name" className="input-field-label">
+                Nome*
+              </label>
+              <Field type="text" name="name" className="input-field-content" />
+              <ErrorMessage
+                name="name"
+                component="div"
+                className="input-field-error"
+              />
             </div>
 
-            <div className='input-field'>
-              <label htmlFor="email" className='input-field-label'>E-mail*</label>
-              <Field type="email" name="email" className='input-field-content'/>
-              <ErrorMessage name="email" component="div" className='input-field-error' />
+            <div className="input-field">
+              <label htmlFor="email" className="input-field-label">
+                E-mail*
+              </label>
+              <Field
+                type="email"
+                name="email"
+                className="input-field-content"
+              />
+              <ErrorMessage
+                name="email"
+                component="div"
+                className="input-field-error"
+              />
             </div>
 
-            <div className='input-field'>
-              <label htmlFor="phone" className='input-field-label'>Telefone/WhatsApp</label>
-              <Field type="tel" 
-                name="phone" 
-                className='input-field-content' 
-                placeholder="DDD + Número" 
+            <div className="input-field">
+              <label htmlFor="phone" className="input-field-label">
+                Telefone/WhatsApp
+              </label>
+              <Field
+                type="tel"
+                name="phone"
+                className="input-field-content"
+                placeholder="DDD + Número"
                 minLength="10"
-                maxLength="11"/>
-              <ErrorMessage name="phone" component="div" className='input-field-error' />
+                maxLength="11"
+              />
+              <ErrorMessage
+                name="phone"
+                component="div"
+                className="input-field-error"
+              />
             </div>
 
-            <div className='input-field'>
-              <label htmlFor="message" className='input-field-label'>Mensagem*</label>
-              <Field as="textarea" name="message" className='input-field-content input-field-content-textarea'/>
-              <ErrorMessage name="message" component="div" className='input-field-error' />
+            <div className="input-field">
+              <label htmlFor="message" className="input-field-label">
+                Mensagem*
+              </label>
+              <Field
+                as="textarea"
+                name="message"
+                className="input-field-content input-field-content-textarea"
+              />
+              <ErrorMessage
+                name="message"
+                component="div"
+                className="input-field-error"
+              />
             </div>
 
             <Ripples
               color={PARAMS.RIPPLES_COLOR}
               className="submit-button-ripples"
             >
-              <button 
+              <button
                 type="submit"
-                className='submit-button' 
-                disabled={isSubmitting || !dirty || !isValid}>
+                className="submit-button"
+                disabled={isSubmitting || !dirty || !isValid}
+              >
                 Enviar Mensagem
               </button>
             </Ripples>

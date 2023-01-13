@@ -4,7 +4,7 @@ import './TeamPage.scss';
 
 function TeamPage() {
   return (
-    <div className='content-wrapper'>
+    <div className="content-wrapper">
       <Title content="Executivos" />
     </div>
   );
