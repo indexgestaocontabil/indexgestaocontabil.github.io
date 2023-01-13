@@ -75,7 +75,7 @@ function ContactPage() {
   };
 
   return (
-    <div className="content-wrapper">
+    <div className="content-wrapper contact-page">
       <Title content="Contato" />
 
       <Formik
@@ -192,6 +192,17 @@ function ContactPage() {
           </Form>
         )}
       </Formik>
+
+      <Title
+        content="Acompanhe nossas redes sociais!"
+        level={3}
+        subtitled={false}
+        marginBottom={8}
+      />
+
+      <div className="social-networks">
+        {/** Create box link to add here */}
+      </div>
     </div>
   );
 }

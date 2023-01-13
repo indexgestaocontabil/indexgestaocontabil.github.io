@@ -2,40 +2,60 @@
 @import '../../vars';
 
 .action-link {
-    $action-link-color: var(--action-link-color-1);
-    $action-link-hover: var(--action-link-color-2);
+  $action-link-color: var(--action-link-color-1);
+  $action-link-hover: var(--action-link-color-2);
 
-    display: inline-block;
+  display: inline-block;
 
-    &-icon {
-        fill: $action-link-color;
+  &.action-link-blue {
+    .action-link-icon {
+      fill: var(--theme-color-3);
     }
 
-    &-wrapper {
-        @extend %dif-aic-jcfs;
-
-        color: $action-link-color;
-        text-decoration: none;
-
-        &:visited {
-            color: $action-link-color;
-        }
-    }
-
-    &-text {
-        font-weight: 600;
-        padding-left: 8px;
+    .action-link-text {
+      color: var(--theme-color-3);
     }
 
     &:hover {
-        .action-link {
-            &-icon {
-                fill: $action-link-hover;
-            }
+      .action-link-icon {
+        fill: var(--theme-color-1);
+      }
 
-            &-wrapper {
-                color: $action-link-hover;
-            }
-        }
+      .action-link-text {
+        color: var(--theme-color-1);
+      }
     }
+  }
+
+  &-icon {
+    fill: $action-link-color;
+  }
+
+  &-wrapper {
+    @extend %dif-aic-jcfs;
+
+    color: $action-link-color;
+    text-decoration: none;
+
+    &:visited {
+      color: $action-link-color;
+    }
+  }
+
+  &-text {
+    font-weight: 600;
+    padding-left: 8px;
+  }
+
+  &:hover {
+    .action-link {
+      &-icon {
+        fill: $action-link-hover;
+      }
+
+      &-wrapper {
+        color: $action-link-hover;
+      }
+    }
+  }
 }

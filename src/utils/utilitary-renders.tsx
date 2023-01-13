@@ -1,6 +1,8 @@
 import { GrInstagram } from 'react-icons/gr';
 import { MdEmail, MdPhone } from 'react-icons/md';
-import ActionLink from '../components/ActionLink/ActionLink';
+import ActionLink, {
+  ActionLinkColorStyle,
+} from '../components/ActionLink/ActionLink';
 import { ACCOUNTS } from '../globals';
 import { getWhatsAppLink } from './utilitary-functions';
 
@@ -21,12 +23,16 @@ export function renderEmail(email = ACCOUNTS.email) {
   return <ActionLink Icon={MdEmail} label={email} link={`mailto:${email}`} />;
 }
 
-export function renderInstagram(account = ACCOUNTS.instagram) {
+export function renderInstagram(
+  account = ACCOUNTS.instagram,
+  colorStyle?: ActionLinkColorStyle
+) {
   return (
     <ActionLink
       Icon={GrInstagram}
       label={`/${account}`}
       link={`https://www.instagram.com/${account}/`}
+      colorStyle={colorStyle}
     />
   );
 }

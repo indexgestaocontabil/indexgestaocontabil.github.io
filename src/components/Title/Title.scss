@@ -2,9 +2,12 @@
 @import '../../vars';
 
 .title {
+  color: var(--theme-color-3);
+  display: inline-block;
+  margin: 0px;
+  padding-bottom: $base-spacing-medium;
+
+  &-subtitled {
     border-bottom: 4px solid var(--theme-color-3);
-    color: var(--theme-color-3);
-    display: inline-block;
-    margin: 0 0 $base-spacing-large 0;
-    padding-bottom: $base-spacing-medium;
+  }
 }

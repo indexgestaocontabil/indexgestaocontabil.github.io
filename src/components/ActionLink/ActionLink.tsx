@@ -2,18 +2,25 @@ import { IconType } from '../../types';
 
 import './ActionLink.scss';
 
+export enum ActionLinkColorStyle {
+  WHITE = 'WHITE',
+  BLUE = 'BLUE',
+}
+
 type PropsType = {
   label: string;
   link: string;
   Icon?: IconType;
   size?: number;
+  colorStyle?: ActionLinkColorStyle;
 };
 
-function ActionLink({ Icon, label, link, size }: PropsType) {
+function ActionLink({ Icon, label, link, size, colorStyle }: PropsType) {
+  colorStyle = colorStyle || ActionLinkColorStyle.WHITE;
   const fontSize = `${size || 14}px`;
 
   return (
-    <div className="action-link">
+    <div className={`action-link action-link-${colorStyle?.toLowerCase()}`}>
       <a
         href={link}
         className="action-link-wrapper"

@@ -1,31 +1,38 @@
 %df-aic-jsb {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 %df-aic-jcc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 %df-fdc-jcc-aife {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+%df-aic-jcc-fdc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 %df-fdc-jcc-aifs {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 %dif-aic-jcfs {
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
 }

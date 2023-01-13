@@ -1,7 +1,8 @@
 @import '../../placeholders';
 @import '../../vars';
 
-.submit-button {
+.contact-page {
+  .submit-button {
     $submit-background-color: var(--theme-color-3);
     $submit-color: var(--theme-color-4);
 
@@ -15,56 +16,58 @@
     opacity: 1;
     transition: opacity 300ms ease-out;
     margin-top: $base-spacing-medium;
-    
+
     &:disabled {
-        opacity: .6;
+      opacity: 0.6;
     }
 
     &-ripples {
-        margin-left: auto;
+      margin-left: auto;
     }
-}
+  }
 
-@media #{$breakpoint-phone} {
-    .submit-button-ripples, .submit-button {
-        width: 100%;
+  @media #{$breakpoint-phone} {
+    .submit-button-ripples,
+    .submit-button {
+      width: 100%;
     }
-}
+  }
 
-.input-field {
+  .input-field {
     @extend %df-fdc-jcc-aifs;
 
     width: 100%;
     margin-bottom: $base-spacing-medium;
 
     &-form {
-        @extend %df-fdc-jcc-aifs;
+      @extend %df-fdc-jcc-aifs;
     }
 
     &-label {
-        font-size: $font-size-1;
-        font-weight: 400;
-        margin-bottom: $base-spacing-small;
-        color: var(--theme-color-1);
+      font-size: $font-size-1;
+      font-weight: 400;
+      margin-bottom: $base-spacing-small;
+      color: var(--theme-color-1);
     }
 
     &-content {
-        width: 100%;
-        height: $input-heigth;
-        font-size: $font-size-1;
-        padding: $base-spacing-small;
-        color: var(--input-text-color);
-        outline-color: var(--theme-color-1);
+      width: 100%;
+      height: $input-heigth;
+      font-size: $font-size-1;
+      padding: $base-spacing-small;
+      color: var(--input-text-color);
+      outline-color: var(--theme-color-1);
 
-        &-textarea {
-            resize: vertical;
-            height: $textarea-height;
-        }
+      &-textarea {
+        resize: vertical;
+        height: $textarea-height;
+      }
     }
 
     &-error {
-        margin-top: $base-spacing-small;
-        font-size: $font-size-4;
-        color: var(--color-error);
+      margin-top: $base-spacing-small;
+      font-size: $font-size-4;
+      color: var(--color-error);
     }
+  }
 }
