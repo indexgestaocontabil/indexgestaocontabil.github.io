@@ -14,6 +14,7 @@
     border-radius: 4px;
     opacity: 1;
     transition: opacity 300ms ease-out;
+    margin-top: $base-spacing-medium;
     
     &:disabled {
         opacity: .6;
@@ -21,6 +22,12 @@
 
     &-ripples {
         margin-left: auto;
+    }
+}
+
+@media #{$breakpoint-phone} {
+    .submit-button-ripples, .submit-button {
+        width: 100%;
     }
 }
 
