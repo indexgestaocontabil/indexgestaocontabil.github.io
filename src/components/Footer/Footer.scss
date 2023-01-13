@@ -2,25 +2,35 @@
 @import '../../placeholders';
 
 .footer {
-    @extend %df-aic-jsb;
-    
-    background-color: var(--theme-color-1);
-    background-image: url('../../assets/img/wave.png');
-    background-size: 100% $footer-height;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 12px $side-padding-desktop;
-    min-height: $footer-height;
+  @extend %df-aic-jsb;
 
-    @media #{$breakpoint-mobile} {
-        padding: 12px $side-padding-mobile;
+  background-color: var(--theme-color-1);
+  background-image: url('../../assets/img/wave.png');
+  background-size: 100% $footer-height;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 12px $side-padding-desktop;
+  min-height: $footer-height;
+
+  @media #{$breakpoint-mobile} {
+    padding: 12px $side-padding-mobile;
+  }
+
+  @media #{$breakpoint-phone} {
+    flex-direction: column;
+    background-position: bottom;
+  }
+
+  &-contacts {
+    @extend %df-fdc-jcc-aifs;
+
+    .action-link:not(:last-child) {
+      margin-bottom: 8px;
     }
 
-    &-contacts {
-        @extend %df-fdc-jcc-aifs;
-
-        .action-link:not(:last-child) {
-            margin-bottom: 8px;
-        }
+    @media #{$breakpoint-phone} {
+      margin-top: $base-spacing-large;
+      padding-bottom: $base-spacing-large;
     }
+  }
 }
