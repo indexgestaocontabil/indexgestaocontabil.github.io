@@ -2,6 +2,7 @@ import { GrInstagram } from "react-icons/gr";
 import { MdEmail, MdPhone } from "react-icons/md";
 import ActionLink from "../components/ActionLink/ActionLink";
 import { ACCOUNTS } from "../globals";
+import { getWhatsAppLink } from "./utilitary-functions";
 
 export function renderWhatsApp(phoneNumber: string, name?: string) {
   const parsedPhoneNumber = phoneNumber.replace(/\(|\)|\s|-/g, '');
@@ -11,7 +12,7 @@ export function renderWhatsApp(phoneNumber: string, name?: string) {
     <ActionLink 
       Icon={MdPhone}
       label={phoneNumber + parsedName}
-      link={`https://wa.me/${parsedPhoneNumber}`} />
+      link={getWhatsAppLink(parsedPhoneNumber)} />
   )
 }
 

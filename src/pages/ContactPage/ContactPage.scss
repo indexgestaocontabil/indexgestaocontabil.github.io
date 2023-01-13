@@ -1,0 +1,72 @@
+@import '../../placeholders';
+@import '../../vars';
+
+.contact-wrapper {
+    $vpadding: 24px;
+    padding: $vpadding $side-padding-desktop;
+
+    @media #{$breakpoint-mobile} {
+        padding: $vpadding $side-padding-mobile;
+    }
+}
+
+.submit-button {
+    $submit-background-color: var(--theme-color-3);
+    $submit-color: var(--theme-color-4);
+
+    font-size: $font-size-3;
+    font-weight: 500;
+    background-color: $submit-background-color;
+    color: $submit-color;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    opacity: 1;
+    transition: opacity 300ms ease-out;
+    
+    &:disabled {
+        opacity: .6;
+    }
+
+    &-ripples {
+        margin-left: auto;
+    }
+}
+
+.input-field {
+    @extend %df-fdc-jcc-aifs;
+
+    width: 100%;
+    margin-bottom: $base-spacing-medium;
+
+    &-form {
+        @extend %df-fdc-jcc-aifs;
+    }
+
+    &-label {
+        font-size: $font-size-1;
+        font-weight: 400;
+        margin-bottom: $base-spacing-small;
+        color: var(--theme-color-1);
+    }
+
+    &-content {
+        width: 100%;
+        height: $input-heigth;
+        font-size: $font-size-1;
+        padding: $base-spacing-small;
+        color: var(--input-text-color);
+        outline-color: var(--theme-color-1);
+
+        &-textarea {
+            resize: vertical;
+            height: $textarea-height;
+        }
+    }
+
+    &-error {
+        margin-top: $base-spacing-small;
+        font-size: $font-size-4;
+        color: var(--color-error);
+    }
+}

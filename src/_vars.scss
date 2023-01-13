@@ -6,6 +6,7 @@ $font-family-2: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
 $side-padding-desktop: 12vw;
 $side-padding-mobile: 4vw;
 
+$base-spacing-x-small: 4px;
 $base-spacing-small: 8px;
 $base-spacing-medium: 12px;
 $base-spacing-large: 24px;
@@ -13,9 +14,12 @@ $base-spacing-large: 24px;
 $font-size-1: 14px;
 $font-size-2: 24px;
 $font-size-3: 18px;
+$font-size-4: 12px;
 
 $breakpoint-mobile: '(max-width: 768px)';
 
+$input-heigth: 48px;
+$textarea-height: 124px;
 
 // Components
 

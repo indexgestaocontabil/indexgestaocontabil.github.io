@@ -13,3 +13,9 @@ export const MEMBERS = {
     phone: '(71) 99273-8464'
   }
 }
+
+export const REGEX = {
+  VALIDATORS: {
+    EMAIL: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+  }
+}
