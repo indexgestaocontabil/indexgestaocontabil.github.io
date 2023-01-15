@@ -1,0 +1,46 @@
+@import '../../vars';
+@import '../../placeholders';
+
+.box-link {
+  $size: 180px;
+  $main-color: var(--theme-color-3);
+  $contrast-color: var(--theme-color-4);
+
+  @extend %df-aic-jcc-fdc;
+
+  width: $size;
+  height: $size - 60px;
+  background-color: $main-color;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 300ms ease-out;
+  cursor: pointer;
+
+  &-icon {
+    fill: $contrast-color;
+    transition: fill 300ms ease-out;
+  }
+
+  &-text {
+    padding-top: 12px;
+    color: $contrast-color;
+    transition: color 300ms ease-out;
+  }
+
+  &:hover {
+    $main-color: var(--theme-color-2);
+    $contrast-color: var(--theme-color-1);
+
+    background-color: $main-color;
+
+    .box-link {
+      &-icon {
+        fill: $contrast-color;
+      }
+
+      &-text {
+        color: $contrast-color;
+      }
+    }
+  }
+}

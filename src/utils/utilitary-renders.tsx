@@ -3,10 +3,11 @@ import { MdEmail, MdPhone } from 'react-icons/md';
 import ActionLink, {
   ActionLinkColorStyle,
 } from '../components/ActionLink/ActionLink';
+import BoxLink from '../components/BoxLink/BoxLink';
 import { ACCOUNTS } from '../globals';
-import { getWhatsAppLink } from './utilitary-functions';
+import { getInstagramLink, getWhatsAppLink } from './utilitary-functions';
 
-export function renderWhatsApp(phoneNumber: string, name?: string) {
+export function renderWhatsAppActionLink(phoneNumber: string, name?: string) {
   const parsedPhoneNumber = phoneNumber.replace(/\(|\)|\s|-/g, '');
   const parsedName = name ? ` (${name})` : '';
 
@@ -19,11 +20,11 @@ export function renderWhatsApp(phoneNumber: string, name?: string) {
   );
 }
 
-export function renderEmail(email = ACCOUNTS.email) {
+export function renderEmailActionLink(email = ACCOUNTS.email) {
   return <ActionLink Icon={MdEmail} label={email} link={`mailto:${email}`} />;
 }
 
-export function renderInstagram(
+export function renderInstagramActionLink(
   account = ACCOUNTS.instagram,
   colorStyle?: ActionLinkColorStyle
 ) {
@@ -31,8 +32,18 @@ export function renderInstagram(
     <ActionLink
       Icon={GrInstagram}
       label={`/${account}`}
-      link={`https://www.instagram.com/${account}/`}
+      link={getInstagramLink(account)}
       colorStyle={colorStyle}
+    />
+  );
+}
+
+export function renderInstagramBoxLink(account = ACCOUNTS.instagram) {
+  return (
+    <BoxLink
+      Icon={GrInstagram}
+      label={account}
+      link={getInstagramLink(account)}
     />
   );
 }

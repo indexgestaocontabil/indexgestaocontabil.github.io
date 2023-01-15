@@ -6,6 +6,7 @@ import './ContactPage.scss';
 import Ripples from 'react-ripples';
 import Title from '../../components/Title/Title';
 import useCustomSnackbar from '../../hooks/use-custom-snackbar';
+import { renderInstagramBoxLink } from '../../utils/utilitary-renders';
 
 type FormType = {
   name?: string;
@@ -200,9 +201,7 @@ function ContactPage() {
         marginBottom={8}
       />
 
-      <div className="social-networks">
-        {/** Create box link to add here */}
-      </div>
+      <div className="social-networks">{renderInstagramBoxLink()}</div>
     </div>
   );
 }
