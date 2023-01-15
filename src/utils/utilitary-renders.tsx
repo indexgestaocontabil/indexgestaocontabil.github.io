@@ -7,7 +7,11 @@ import BoxLink from '../components/BoxLink/BoxLink';
 import { ACCOUNTS } from '../globals';
 import { getInstagramLink, getWhatsAppLink } from './utilitary-functions';
 
-export function renderWhatsAppActionLink(phoneNumber: string, name?: string) {
+export function renderWhatsAppActionLink(
+  phoneNumber: string,
+  name?: string,
+  colorStyle?: ActionLinkColorStyle
+) {
   const parsedPhoneNumber = phoneNumber.replace(/\(|\)|\s|-/g, '');
   const parsedName = name ? ` (${name})` : '';
 
@@ -16,6 +20,7 @@ export function renderWhatsAppActionLink(phoneNumber: string, name?: string) {
       Icon={MdPhone}
       label={phoneNumber + parsedName}
       link={getWhatsAppLink(parsedPhoneNumber)}
+      colorStyle={colorStyle}
     />
   );
 }

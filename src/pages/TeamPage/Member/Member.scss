@@ -1,0 +1,13 @@
+@import '../../../placeholders';
+@import '../../../vars';
+
+.member {
+  &-photo {
+    $size: 300px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: $size;
+    height: $size;
+  }
+}
