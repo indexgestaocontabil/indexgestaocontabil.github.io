@@ -25,11 +25,11 @@ const renderActionLink = (
   options?: Options
 ) => <ActionLink Icon={icon} label={label} link={link} {...(options || {})} />;
 
-export function renderWhatsAppActionLink(
+export const renderWhatsAppActionLink = (
   phoneNumber: string,
   name?: string,
   options?: Options
-) {
+) => {
   const parsedPhoneNumber = phoneNumber.replace(/\(|\)|\s|-/g, '');
   const parsedName = name ? ` (${name})` : '';
 
@@ -39,35 +39,31 @@ export function renderWhatsAppActionLink(
     getWhatsAppLink(parsedPhoneNumber),
     options
   );
-}
+};
 
-export function renderLinkedinActionLink(
+export const renderLinkedinActionLink = (
   account: string,
   label: string,
   options?: Options
-) {
-  return renderActionLink(GrLinkedin, label, getLinkedinLink(account), options);
-}
+) => renderActionLink(GrLinkedin, label, getLinkedinLink(account), options);
 
-export function renderEmailActionLink(email = ACCOUNTS.email) {
-  return <ActionLink Icon={MdEmail} label={email} link={`mailto:${email}`} />;
-}
+export const renderEmailActionLink = (
+  email = ACCOUNTS.email,
+  options?: Options
+) => renderActionLink(MdEmail, email, `mailto:${email}`, options);
 
-export function renderInstagramActionLink(
+export const renderInstagramActionLink = (
   account = ACCOUNTS.instagram,
-  colorStyle?: ActionLinkColorStyle
-) {
-  return (
-    <ActionLink
-      Icon={GrInstagram}
-      label={`/${account}`}
-      link={getInstagramLink(account)}
-      colorStyle={colorStyle}
-    />
+  options?: Options
+) =>
+  renderActionLink(
+    GrInstagram,
+    `/${account}`,
+    getInstagramLink(account),
+    options
   );
-}
 
-export function renderInstagramBoxLink(account = ACCOUNTS.instagram) {
+export const renderInstagramBoxLink = (account = ACCOUNTS.instagram) => {
   return (
     <BoxLink
       Icon={GrInstagram}
@@ -75,4 +71,4 @@ export function renderInstagramBoxLink(account = ACCOUNTS.instagram) {
       link={getInstagramLink(account)}
     />
   );
-}
+};
