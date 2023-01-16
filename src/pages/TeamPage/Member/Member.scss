@@ -4,7 +4,7 @@
 .member {
   $avatar-size: 220px;
 
-  @extend %df-aic-jsb;
+  @extend %df-ais-jsb;
 
   @media #{$breakpoint-mobile} {
     flex-wrap: wrap;
@@ -25,6 +25,7 @@
 
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 6px;
     width: $size;
     height: $size;
   }

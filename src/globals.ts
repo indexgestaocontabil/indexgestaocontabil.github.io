@@ -16,7 +16,7 @@ export const MEMBERS = {
     phone: '(71) 98739-0348',
     linkedin: 'rossanferraz',
     photo:
-      'https://1.bp.blogspot.com/-c4fttitbpAQ/XiC7l5Yco0I/AAAAAAAASEo/HtRecUNSdlUQPc8Gr32gYdudrtKxHluJQCLcBGAsYHQ/s1600/0743fb54b86be9404c8e11821b1b6d2e.jpg',
+      'https://media.licdn.com/dms/image/C4E03AQFQOVQH1NHkSQ/profile-displayphoto-shrink_800_800/0/1516899193852?e=1679529600&v=beta&t=qyMCAu9k5PZuqb3Yuxkuvv_znf-i7xpO_v1g2B4quh8',
     about: [
       'Contador formado pela Faculdade Batista Brasileira (FBB), com Pós-Graduação em Planejamento Tributário na Unime. Atua desde 2011 em assessoria e consultoria empresarial e tributária.',
       'Rossan tem vasta experiência em ICMS no Estado da Bahia e atualmente é líder da equipe responsável pela área fiscal, atuando com foco na redução da carga tributária e recuperação de créditos tributários.',
