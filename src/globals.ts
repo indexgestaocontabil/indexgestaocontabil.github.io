@@ -14,6 +14,7 @@ export const MEMBERS = {
   Rossan: {
     name: 'Rossan Ferraz',
     phone: '(71) 98739-0348',
+    linkedin: 'rossanferraz',
     photo:
       'https://1.bp.blogspot.com/-c4fttitbpAQ/XiC7l5Yco0I/AAAAAAAASEo/HtRecUNSdlUQPc8Gr32gYdudrtKxHluJQCLcBGAsYHQ/s1600/0743fb54b86be9404c8e11821b1b6d2e.jpg',
     about: [
@@ -22,14 +23,15 @@ export const MEMBERS = {
       'Possui experiência em projetos na área de Tributos Diretos e Indiretos, Pleitos de Incentivos SUDENE e Programa Desenvolve. Também é responsável pelo planejamento e revisão tributária de empresas, nos segmentos de comércio e serviço nos níveis industriais, atacadistas e varejistas.',
     ],
     specialities: [
+      'Apuração Fiscal',
       'Benefícios Fiscais',
       'Planejamento Tributário',
-      'Apuração Fiscal',
     ],
   },
   Thiago: {
     name: 'Thiago Anunciação',
     phone: '(71) 99273-8464',
+    linkedin: 'rossanferraz',
     photo:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTbeRnpcNKv83D0D_HDqOeb8EHntMs21BsZg&usqp=CAU',
     about: [
@@ -39,9 +41,8 @@ export const MEMBERS = {
     ],
     specialities: [
       'Organização de Passivo Fiscal',
-      'Regularização de Tributos',
-      'Parcelamento de Tributos',
       'Reorganização Societária',
+      'Regularização e Parcelamento de Tributos',
     ],
   },
 };

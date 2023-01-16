@@ -13,14 +13,24 @@ type PropsType = {
   Icon?: IconType;
   size?: number;
   colorStyle?: ActionLinkColorStyle;
+  className?: string;
 };
 
-function ActionLink({ Icon, label, link, size, colorStyle }: PropsType) {
+function ActionLink({
+  Icon,
+  label,
+  link,
+  size,
+  colorStyle,
+  className,
+}: PropsType) {
   colorStyle = colorStyle || ActionLinkColorStyle.WHITE;
   const fontSize = `${size || 14}px`;
 
   return (
-    <div className={`action-link action-link-${colorStyle?.toLowerCase()}`}>
+    <div
+      className={`action-link action-link-${colorStyle?.toLowerCase()} ${className}`}
+    >
       <a
         href={link}
         className="action-link-wrapper"

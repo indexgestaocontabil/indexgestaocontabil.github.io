@@ -2,12 +2,67 @@
 @import '../../../vars';
 
 .member {
+  $avatar-size: 220px;
+
+  @extend %df-aic-jsb;
+
+  @media #{$breakpoint-mobile} {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .member {
+      &-info {
+        padding-top: $base-spacing-small;
+        padding-left: 0;
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+  }
+
   &-photo {
-    $size: 300px;
+    $size: $avatar-size;
 
     background-size: cover;
     background-repeat: no-repeat;
     width: $size;
     height: $size;
+  }
+
+  &-info {
+    width: calc(100% - #{$avatar-size});
+    min-width: 300px;
+    padding-left: $base-spacing-large;
+
+    &-name {
+      font-weight: 600;
+      font-size: $font-size-2;
+      color: var(--theme-color-3);
+    }
+
+    &-about {
+      &-item {
+        font-size: $font-size-1;
+        line-height: 1.3em;
+      }
+    }
+
+    &-contact {
+      @extend %df-aic-jcfs-fww;
+
+      &-item {
+        margin-right: $base-spacing-medium;
+        margin-bottom: $base-spacing-medium;
+      }
+    }
+
+    &-specialities {
+      @extend %df-aic-jcfs-fww;
+
+      &-item {
+        margin-right: $base-spacing-small;
+        margin-bottom: $base-spacing-small;
+      }
+    }
   }
 }

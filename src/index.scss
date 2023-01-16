@@ -1,4 +1,4 @@
-@import-normalize; 
+@import-normalize;
 @import './vars';
 @import './placeholders';
 
@@ -7,28 +7,28 @@
 :root {
   --color-bg-1: #fefefe;
 
-  --theme-color-1: #0D1A6C;
-  --theme-color-2: #EEF100;
-  --theme-color-3: #0971C3;
+  --theme-color-1: #0d1a6c;
+  --theme-color-2: #eef100;
+  --theme-color-3: #0971c3;
   --theme-color-4: #fff;
-  --theme-color-5: rgb(9, 113, 195, .7);
+  --theme-color-5: rgb(9, 113, 195, 0.7);
 
-  --menu-opener-bg: #0971C3; 
-  --menu-opener-icon: #fff; 
-  
-  --menu-overlay-bg: rgba(30, 30, 30, .4);
+  --menu-opener-bg: #0971c3;
+  --menu-opener-icon: #fff;
 
-  --swiper-bullet-active: #0971C3;
+  --menu-overlay-bg: rgba(30, 30, 30, 0.4);
+
+  --swiper-bullet-active: #0971c3;
   --swiper-bullet-inactive: rgba(255, 255, 255, 1);
 
   --action-link-color-1: #fff;
-  --action-link-color-2: #EEF100;
+  --action-link-color-2: #eef100;
 
   --input-text-color: #333;
-  --color-error: #DD3444;
+  --color-error: #dd3444;
 
-  --snackbar-background: rgb(9, 113, 195, .9);
-  --snackbar-close-background: #0D1A6C;
+  --snackbar-background: rgb(9, 113, 195, 0.9);
+  --snackbar-close-background: #0d1a6c;
   --snackbar-close-fill: #fff;
   --snackbar-close-text: #fff;
 }
@@ -41,13 +41,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  &, & *, & * * {
+  &,
+  & *,
+  & * * {
     box-sizing: border-box;
   }
 }
 
 .container {
-  min-height: calc(var(--window-height) - #{$header-height + $footer-height})
+  min-height: calc(var(--window-height) - #{$header-height + $footer-height});
 }
 
 .content-wrapper {
@@ -55,7 +57,7 @@ body {
   padding: $vpadding $side-padding-desktop;
 
   @media #{$breakpoint-mobile} {
-      padding: $vpadding $side-padding-mobile;
+    padding: $vpadding $side-padding-mobile;
   }
 }
 
@@ -64,16 +66,16 @@ body {
   padding: $vpadding $side-padding-desktop;
 
   @media #{$breakpoint-mobile} {
-      padding: $vpadding $side-padding-mobile;
+    padding: $vpadding $side-padding-mobile;
   }
 }
 
-.custom-snackbar{
+.custom-snackbar {
   &-close {
     $size: 32px;
 
     @extend %df-aic-jcc;
-    
+
     background: var(--snackbar-close-background);
     border: none;
     border-radius: 100%;
@@ -99,4 +101,14 @@ body {
       width: 100%;
     }
   }
+}
+
+.tag {
+  background: var(--theme-color-3);
+  color: var(--theme-color-4);
+  font-weight: 600;
+  font-size: $font-size-1;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: inline-block;
 }

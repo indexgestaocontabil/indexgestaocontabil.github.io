@@ -1,28 +1,52 @@
-import { GrInstagram } from 'react-icons/gr';
+import { GrInstagram, GrLinkedin } from 'react-icons/gr';
 import { MdEmail, MdPhone } from 'react-icons/md';
 import ActionLink, {
   ActionLinkColorStyle,
 } from '../components/ActionLink/ActionLink';
 import BoxLink from '../components/BoxLink/BoxLink';
 import { ACCOUNTS } from '../globals';
-import { getInstagramLink, getWhatsAppLink } from './utilitary-functions';
+import { IconType } from '../types';
+import {
+  getInstagramLink,
+  getLinkedinLink,
+  getWhatsAppLink,
+} from './utilitary-functions';
+
+type Options = {
+  colorStyle?: ActionLinkColorStyle;
+  size?: number;
+  className?: string;
+};
+
+const renderActionLink = (
+  icon: IconType,
+  label: string,
+  link: string,
+  options?: Options
+) => <ActionLink Icon={icon} label={label} link={link} {...(options || {})} />;
 
 export function renderWhatsAppActionLink(
   phoneNumber: string,
   name?: string,
-  colorStyle?: ActionLinkColorStyle
+  options?: Options
 ) {
   const parsedPhoneNumber = phoneNumber.replace(/\(|\)|\s|-/g, '');
   const parsedName = name ? ` (${name})` : '';
 
-  return (
-    <ActionLink
-      Icon={MdPhone}
-      label={phoneNumber + parsedName}
-      link={getWhatsAppLink(parsedPhoneNumber)}
-      colorStyle={colorStyle}
-    />
+  return renderActionLink(
+    MdPhone,
+    phoneNumber + parsedName,
+    getWhatsAppLink(parsedPhoneNumber),
+    options
   );
+}
+
+export function renderLinkedinActionLink(
+  account: string,
+  label: string,
+  options?: Options
+) {
+  return renderActionLink(GrLinkedin, label, getLinkedinLink(account), options);
 }
 
 export function renderEmailActionLink(email = ACCOUNTS.email) {

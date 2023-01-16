@@ -3,6 +3,8 @@
 
 .team-wrapper {
   .team-members {
-    @extend %df-aic-jsb;
+    .member:first-of-type {
+      margin-bottom: $base-spacing-large;
+    }
   }
 }

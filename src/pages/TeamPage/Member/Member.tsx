@@ -1,16 +1,33 @@
 import { ActionLinkColorStyle } from '../../../components/ActionLink/ActionLink';
-import { renderWhatsAppActionLink } from '../../../utils/utilitary-renders';
+import {
+  renderLinkedinActionLink,
+  renderWhatsAppActionLink,
+} from '../../../utils/utilitary-renders';
 import './Member.scss';
 
 type PropsType = {
   name: string;
   phone: string;
   photo: string;
+  linkedin: string;
   about: string[];
   specialities: string[];
 };
 
-function Member({ name, phone, photo, about, specialities }: PropsType) {
+function Member({
+  name,
+  phone,
+  photo,
+  about,
+  specialities,
+  linkedin,
+}: PropsType) {
+  const actionLinkOptions = {
+    colorStyle: ActionLinkColorStyle.BLUE,
+    className: 'member-info-contact-item',
+    size: 18,
+  };
+
   return (
     <div className="member">
       <div
@@ -18,24 +35,28 @@ function Member({ name, phone, photo, about, specialities }: PropsType) {
         style={{ backgroundImage: `url(${photo})` }}
       />
       <div className="member-info">
-        <div className="member-name">{name}</div>
-        <div className="member-phone">
-          {renderWhatsAppActionLink(
-            phone,
-            undefined,
-            ActionLinkColorStyle.BLUE
-          )}
-        </div>
-        <div className="member-about">
+        <div className="member-info-name">{name}</div>
+        <div className="member-info-about">
           {about.map((aboutItem, index) => (
-            <p key={name + index} className="member-about-item">
+            <p key={name + index} className="member-info-about-item">
               {aboutItem}
             </p>
           ))}
         </div>
-        <div className="member-specialities">
+        <div className="member-info-contact">
+          {renderLinkedinActionLink(
+            linkedin,
+            `/in/${linkedin}`,
+            actionLinkOptions
+          )}
+          {renderWhatsAppActionLink(phone, undefined, actionLinkOptions)}
+        </div>
+        <div className="member-info-specialities">
           {specialities.map((specialityItem, index) => (
-            <div key={name + index} className="member-specialities-item tag">
+            <div
+              key={name + index}
+              className="member-info-specialities-item tag"
+            >
               {specialityItem}
             </div>
           ))}
