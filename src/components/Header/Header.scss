@@ -2,50 +2,56 @@
 @import '../../placeholders';
 
 .header {
-    $logo-width: 64px;
-    $color-navigation-item: #fff;
-    $color-active-navigation-item: var(--theme-color-2);
+  $logo-width: $header-height - 16px;
+  $color-navigation-item: #fff;
+  $color-active-navigation-item: var(--theme-color-2);
 
-    @extend %df-aic-jsb;
+  @extend %df-aic-jsb;
 
-    height: $header-height;
-    background: var(--theme-color-1);
-    padding: 0 $side-padding-desktop;
+  height: $header-height;
+  background: var(--theme-color-1);
 
-    @media #{$breakpoint-mobile} {
-        padding: 0 $side-padding-mobile;
+  background-image: url('../../assets/img/wave-down.png');
+  background-size: 100% $header-height;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  padding: 0 $side-padding-desktop;
+
+  @media #{$breakpoint-mobile} {
+    padding: 0 $side-padding-mobile;
+  }
+
+  &-logo {
+    width: $logo-width;
+
+    &-image {
+      height: $header-height - 30px;
     }
+  }
 
-    &-logo {
-        width: $logo-width;
+  &-navigation {
+    padding-left: $base-spacing-small;
 
-        &-image {
-            height: $header-height - 30px;
-        }
+    &-link {
+      color: $color-navigation-item;
+      font-weight: 600;
+      font-size: $font-size-3;
+      text-decoration: none;
+      margin-left: $base-spacing-medium;
+
+      &:visited {
+        color: $color-navigation-item;
+      }
+
+      &.active,
+      &:hover {
+        color: $color-active-navigation-item;
+      }
     }
-
-    &-navigation {
-        padding-left: $base-spacing-small;
-
-        &-link {
-            color: $color-navigation-item;
-            font-weight: 600;
-            font-size: $font-size-3;
-            text-decoration: none;
-            margin-left: $base-spacing-medium;
-
-            &:visited {
-                color: $color-navigation-item;
-            }
-
-            &.active, &:hover {
-                color: $color-active-navigation-item;
-            }
-        }
-    }
+  }
 }
 
-
 .active {
-    font-weight: bold;
+  font-weight: bold;
 }
