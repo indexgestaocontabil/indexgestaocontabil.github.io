@@ -14,7 +14,7 @@ type PropsType = {
 
 type ValidIconType = typeof MdMenu;
 
-function BurgerMenu({ children }: PropsType) {
+const BurgerMenu = ({ children }: PropsType) => {
   const [isMenuOpen, toggleMenu] = useToggle(false);
   const location = useLocation();
 
@@ -22,22 +22,16 @@ function BurgerMenu({ children }: PropsType) {
     toggleMenu(false);
   }, [location, toggleMenu]);
 
-  function renderButton(Icon: ValidIconType, callback: () => void) {
-    return (
-      <Ripples
-        color={PARAMS.RIPPLES_COLOR}
-        className="menu-mobile-trigger-ripple menu-mobile-opener"
-      >
-        <button
-          type="button"
-          className="menu-mobile-trigger"
-          onClick={callback}
-        >
-          <Icon size={'24px'} className="menu-mobile-trigger-icon" />
-        </button>
-      </Ripples>
-    );
-  }
+  const renderButton = (Icon: ValidIconType, callback: () => void) => (
+    <Ripples
+      color={PARAMS.RIPPLES_COLOR}
+      className="menu-mobile-trigger-ripple menu-mobile-opener"
+    >
+      <button type="button" className="menu-mobile-trigger" onClick={callback}>
+        <Icon size={'24px'} className="menu-mobile-trigger-icon" />
+      </button>
+    </Ripples>
+  );
 
   return (
     <div className="menu-mobile">
@@ -58,6 +52,6 @@ function BurgerMenu({ children }: PropsType) {
       )}
     </div>
   );
-}
+};
 
 export default BurgerMenu;

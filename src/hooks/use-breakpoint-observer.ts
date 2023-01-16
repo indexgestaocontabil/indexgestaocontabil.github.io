@@ -13,7 +13,7 @@ const useBreakpointObserver = () => {
   const [isDesktop, setIsDesktop] = useState<boolean>(checkDesktopBreakpoint());
 
   useLayoutEffect(() => {
-    function handleResize() {
+    const handleResize = () => {
       const newMobileStatus = checkMobileBreakpoint();
       if (newMobileStatus !== isMobile) {
         setIsMobile(newMobileStatus);
@@ -23,7 +23,7 @@ const useBreakpointObserver = () => {
       if (newDesktopStatus !== isDesktop) {
         setIsDesktop(newDesktopStatus);
       }
-    }
+    };
 
     // First Execution
     handleResize();

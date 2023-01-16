@@ -6,7 +6,7 @@ import useBreakpointObserver from '../../hooks/use-breakpoint-observer';
 import { useCallback } from 'react';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
-function Header() {
+const Header = () => {
   const { isDesktop } = useBreakpointObserver();
 
   const getNavigationItems = useCallback(() => {
@@ -46,6 +46,6 @@ function Header() {
       </nav>
     </header>
   );
-}
+};
 
 export default Header;

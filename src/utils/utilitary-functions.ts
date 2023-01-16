@@ -1,11 +1,8 @@
-export function getWhatsAppLink(phoneNumber: string) {
-  return `https://wa.me/${phoneNumber}`;
-}
+export const getWhatsAppLink = (phoneNumber: string) =>
+  `https://wa.me/${phoneNumber}`;
 
-export function getInstagramLink(account: string) {
-  return `https://www.instagram.com/${account}/`;
-}
+export const getInstagramLink = (account: string) =>
+  `https://www.instagram.com/${account}/`;
 
-export function getLinkedinLink(account: string) {
-  return `https://www.linkedin.com/in/${account}/`;
-}
+export const getLinkedinLink = (account: string) =>
+  `https://www.linkedin.com/in/${account}/`;

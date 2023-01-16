@@ -12,13 +12,13 @@ type PropsType = {
   marginBottom?: number;
 };
 
-function Title({
+const Title = ({
   content,
   level,
   additionalClassNames,
   subtitled = true,
   marginBottom = 24,
-}: PropsType) {
+}: PropsType) => {
   level = level || 1;
 
   const styles = useMemo(() => ({ marginBottom }), [marginBottom]);
@@ -58,6 +58,6 @@ function Title({
       )}
     </>
   );
-}
+};
 
 export default Title;

@@ -4,17 +4,15 @@ import { MEMBERS } from '../../globals';
 import Member from './Member/Member';
 import './TeamPage.scss';
 
-function TeamPage() {
-  return (
-    <div className="content-wrapper team-wrapper">
-      <Title content="Executivos" />
+const TeamPage = () => (
+  <div className="content-wrapper team-wrapper">
+    <Title content="Executivos" />
 
-      <div className="team-members">
-        <Member {...MEMBERS.Rossan} />
-        <Member {...MEMBERS.Thiago} />
-      </div>
+    <div className="team-members">
+      <Member {...MEMBERS.Rossan} />
+      <Member {...MEMBERS.Thiago} />
     </div>
-  );
-}
+  </div>
+);
 
 export default TeamPage;

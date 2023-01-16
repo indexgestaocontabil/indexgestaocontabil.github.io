@@ -6,7 +6,7 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import './slides.scss';
 
-function Slides() {
+const Slides = () => {
   SwiperCore.use([Pagination, Autoplay]);
 
   return (
@@ -31,6 +31,6 @@ function Slides() {
       </SwiperSlide>
     </Swiper>
   );
-}
+};
 
 export default Slides;

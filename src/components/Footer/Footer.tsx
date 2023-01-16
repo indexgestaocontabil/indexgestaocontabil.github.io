@@ -7,18 +7,16 @@ import {
 import { MEMBERS } from '../../globals';
 import logo from '../../assets/img/logo-small-amarela.png';
 
-function Footer() {
-  return (
-    <footer className="footer">
-      <img src={logo} alt="Logotipo da Index Gestão Contábil" />
-      <div className="footer-contacts">
-        {renderInstagramActionLink()}
-        {renderEmailActionLink()}
-        {renderWhatsAppActionLink(MEMBERS.Rossan.phone, MEMBERS.Rossan.name)}
-        {renderWhatsAppActionLink(MEMBERS.Thiago.phone, MEMBERS.Thiago.name)}
-      </div>
-    </footer>
-  );
-}
+const Footer = () => (
+  <footer className="footer">
+    <img src={logo} alt="Logotipo da Index Gestão Contábil" />
+    <div className="footer-contacts">
+      {renderInstagramActionLink()}
+      {renderEmailActionLink()}
+      {renderWhatsAppActionLink(MEMBERS.Rossan.phone, MEMBERS.Rossan.name)}
+      {renderWhatsAppActionLink(MEMBERS.Thiago.phone, MEMBERS.Thiago.name)}
+    </div>
+  </footer>
+);
 
 export default Footer;

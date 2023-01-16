@@ -14,14 +14,14 @@ type PropsType = {
   specialities: string[];
 };
 
-function Member({
+const Member = ({
   name,
   phone,
   photo,
   about,
   specialities,
   linkedin,
-}: PropsType) {
+}: PropsType) => {
   const actionLinkOptions = {
     colorStyle: ActionLinkColorStyle.BLUE,
     className: 'member-info-contact-item',
@@ -64,6 +64,6 @@ function Member({
       </div>
     </div>
   );
-}
+};
 
 export default Member;

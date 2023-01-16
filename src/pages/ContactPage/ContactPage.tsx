@@ -22,7 +22,7 @@ const initialPayload: FormType = {
   message: '',
 };
 
-function ContactPage() {
+const ContactPage = () => {
   const triggerSnackbar = useCustomSnackbar();
 
   const sendToFormSubmit = (
@@ -204,6 +204,6 @@ function ContactPage() {
       <div className="social-networks">{renderInstagramBoxLink()}</div>
     </div>
   );
-}
+};
 
 export default ContactPage;

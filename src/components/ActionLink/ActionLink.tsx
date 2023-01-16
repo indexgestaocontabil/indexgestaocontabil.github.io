@@ -16,14 +16,14 @@ type PropsType = {
   className?: string;
 };
 
-function ActionLink({
+const ActionLink = ({
   Icon,
   label,
   link,
   size,
   colorStyle,
   className,
-}: PropsType) {
+}: PropsType) => {
   colorStyle = colorStyle || ActionLinkColorStyle.WHITE;
   const fontSize = `${size || 14}px`;
 
@@ -44,6 +44,6 @@ function ActionLink({
       </a>
     </div>
   );
-}
+};
 
 export default ActionLink;

@@ -19,53 +19,49 @@ interface RouteDefinition {
   ReactComponent: JSX.Element;
 }
 
-export function getRouteDefinitions(): RouteDefinition[] {
-  return [
-    {
-      title: 'Home',
-      path: '/',
-      ReactComponent: <HomePage />,
-    },
-    {
-      title: 'Serviços',
-      path: '/servicos',
-      ReactComponent: <ServicesPage />,
-    },
-    {
-      title: 'Executivos',
-      path: '/executivos',
-      ReactComponent: <TeamPage />,
-    },
-    {
-      title: 'Contato',
-      path: '/contato',
-      ReactComponent: <ContactPage />,
-    },
-  ];
-}
+export const getRouteDefinitions = (): RouteDefinition[] => [
+  {
+    title: 'Home',
+    path: '/',
+    ReactComponent: <HomePage />,
+  },
+  {
+    title: 'Serviços',
+    path: '/servicos',
+    ReactComponent: <ServicesPage />,
+  },
+  {
+    title: 'Executivos',
+    path: '/executivos',
+    ReactComponent: <TeamPage />,
+  },
+  {
+    title: 'Contato',
+    path: '/contato',
+    ReactComponent: <ContactPage />,
+  },
+];
 
-export default function AppRouter() {
-  const routes = getRouteDefinitions();
+const AppRouter = () => (
+  <Router>
+    <SnackbarProvider
+      dense={VIEWPORT.IS_MOBILE}
+      anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      className="custom-snackbar-item"
+      maxSnack={3}
+    >
+      <Header />
+      <main className="container">
+        <Routes>
+          {getRouteDefinitions().map(({ path, ReactComponent }) => (
+            <Route key={path} path={path} element={ReactComponent} />
+          ))}
+          <Route path="*" element={<Navigate replace to="/" />} />
+        </Routes>
+      </main>
+      <Footer />
+    </SnackbarProvider>
+  </Router>
+);
 
-  return (
-    <Router>
-      <SnackbarProvider
-        dense={VIEWPORT.IS_MOBILE}
-        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-        className="custom-snackbar-item"
-        maxSnack={3}
-      >
-        <Header />
-        <main className="container">
-          <Routes>
-            {routes.map(({ path, ReactComponent }) => (
-              <Route key={path} path={path} element={ReactComponent} />
-            ))}
-            <Route path="*" element={<Navigate replace to="/" />} />
-          </Routes>
-        </main>
-        <Footer />
-      </SnackbarProvider>
-    </Router>
-  );
-}
+export default AppRouter;
