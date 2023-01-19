@@ -15,8 +15,7 @@ export const MEMBERS = {
     name: 'Rossan Ferraz',
     phone: '(71) 98739-0348',
     linkedin: 'rossanferraz',
-    photo:
-      'https://media.licdn.com/dms/image/C4E03AQFQOVQH1NHkSQ/profile-displayphoto-shrink_800_800/0/1516899193852?e=1679529600&v=beta&t=qyMCAu9k5PZuqb3Yuxkuvv_znf-i7xpO_v1g2B4quh8',
+    photo: `${process.env.PUBLIC_URL}/rossan.jpeg`,
     about: [
       'Contador formado pela Faculdade Batista Brasileira (FBB), com Pós-Graduação em Planejamento Tributário na Unime. Atua desde 2011 em assessoria e consultoria empresarial e tributária.',
       'Rossan tem vasta experiência em ICMS no Estado da Bahia e atualmente é líder da equipe responsável pela área fiscal, atuando com foco na redução da carga tributária e recuperação de créditos tributários.',
@@ -31,9 +30,8 @@ export const MEMBERS = {
   Thiago: {
     name: 'Thiago Anunciação',
     phone: '(71) 99273-8464',
-    linkedin: 'rossanferraz',
-    photo:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTbeRnpcNKv83D0D_HDqOeb8EHntMs21BsZg&usqp=CAU',
+    linkedin: 'thiago-anunciacao',
+    photo: `${process.env.PUBLIC_URL}/thiago.jpeg`,
     about: [
       'Contador formado pela Universidade Federal da Bahia (UFBA) com Pós-Graduação em Planejamento Tributário na Unime. Atua desde 2010 em assessoria tributária.',
       'Thiago tem vasta experiência em reorganização societária, revisão, regularização fiscal, acompanhamento de fiscalização, defesas administrativas, recuperação de crédito e planejamento tributário.',

@@ -17,6 +17,11 @@
         width: 100%;
         min-width: 100%;
       }
+
+      &-photo {
+        height: $avatar-size;
+        border-radius: 100%;
+      }
     }
   }
 
@@ -25,9 +30,10 @@
 
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     border-radius: 6px;
     width: $size;
-    height: $size;
+    height: $size + 50;
   }
 
   &-info {
