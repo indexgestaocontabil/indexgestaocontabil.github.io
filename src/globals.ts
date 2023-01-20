@@ -13,7 +13,7 @@ export const ACCOUNTS = {
 export const MEMBERS = {
   Rossan: {
     name: 'Rossan Ferraz',
-    phone: '(71) 98739-0348',
+    phone: '(71) 9181-3380',
     linkedin: 'rossanferraz',
     photo: `${process.env.PUBLIC_URL}/rossan.jpeg`,
     about: [
@@ -29,7 +29,7 @@ export const MEMBERS = {
   },
   Thiago: {
     name: 'Thiago Anunciação',
-    phone: '(71) 99273-8464',
+    phone: '(71) 8830-1015',
     linkedin: 'thiago-anunciacao',
     photo: `${process.env.PUBLIC_URL}/thiago.jpeg`,
     about: [

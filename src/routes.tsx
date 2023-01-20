@@ -8,6 +8,7 @@ import {
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import { VIEWPORT } from './globals';
+import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import HomePage from './pages/HomePage/HomePage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
@@ -24,6 +25,11 @@ export const getRouteDefinitions = (): RouteDefinition[] => [
     title: 'Home',
     path: '/',
     ReactComponent: <HomePage />,
+  },
+  {
+    title: 'Sobre',
+    path: '/sobre',
+    ReactComponent: <AboutPage />,
   },
   {
     title: 'Serviços',
