@@ -6,14 +6,14 @@ export const PARAMS = {
 
 export const ACCOUNTS = {
   // email: 'hugodeiro@gmail.com',
-  email: 'indexcontabilidade@outlook.com',
+  email: 'indexgestaocontabil@outlook.com',
   instagram: 'indexgestaocontabil',
 };
 
 export const MEMBERS = {
   Rossan: {
     name: 'Rossan Ferraz',
-    phone: '(71) 9181-3380',
+    phone: '(71) 99181-3380',
     linkedin: 'rossanferraz',
     photo: `${process.env.PUBLIC_URL}/rossan.jpeg`,
     about: [
@@ -29,7 +29,7 @@ export const MEMBERS = {
   },
   Thiago: {
     name: 'Thiago Anunciação',
-    phone: '(71) 8830-1015',
+    phone: '(71) 98830-1015',
     linkedin: 'thiago-anunciacao',
     photo: `${process.env.PUBLIC_URL}/thiago.jpeg`,
     about: [
@@ -38,7 +38,7 @@ export const MEMBERS = {
       'Também é responsável pela execução de tarefas relacionadas a apuração, análise e fechamento de balancetes e balanços, bem como na administração do passivo fiscal de empresas, acompanhamento de parcelamentos e renegociação de dívidas tributárias.',
     ],
     specialities: [
-      'Organização de Passivo Fiscal',
+      'Gestão de Passivo Fiscal',
       'Reorganização Societária',
       'Regularização e Parcelamento de Tributos',
     ],
