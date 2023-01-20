@@ -1,0 +1,32 @@
+@import '../../vars';
+@import '../../placeholders';
+@import '../../index.scss';
+
+.services-page {
+  .header-wrapper {
+    padding-bottom: 0;
+  }
+
+  &-section {
+    @extend .content-wrapper;
+
+    &:nth-child(odd) {
+      background: var(--theme-color-6);
+    }
+
+    &-description {
+      margin-top: 0;
+      margin-bottom: $base-spacing-large + 4px;
+      font-size: $font-size-3;
+      line-height: 1.5em;
+      text-indent: 24px;
+      text-align: justify;
+    }
+  }
+
+  @media #{$breakpoint-phone} {
+    .tag {
+      padding: 16px 12px;
+    }
+  }
+}

@@ -12,6 +12,7 @@
   --theme-color-3: #0971c3;
   --theme-color-4: #fff;
   --theme-color-5: rgb(9, 113, 195, 0.7);
+  --theme-color-6: #f3f3f3;
 
   --menu-opener-bg: #0971c3;
   --menu-opener-icon: #fff;
@@ -103,6 +104,17 @@ body {
   }
 }
 
+.tagset {
+  @extend %df-aic-jcfs-fww;
+
+  .tag {
+    $spacing: 6px;
+
+    margin-right: $spacing;
+    margin-bottom: $spacing;
+  }
+}
+
 .tag {
   background: var(--theme-color-3);
   color: var(--theme-color-4);
@@ -111,4 +123,5 @@ body {
   border-radius: 6px;
   padding: 8px 12px;
   display: inline-block;
+  line-height: 1.5em;
 }

@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Área Contábil",
+    "description": "Atuamos na análise das informações que partem do setor financeiro da empresa, auxiliando no desenvolvimento e apuração das provisões fiscais, trabalhistas e comerciais, de modo a viabilizar a geração de Balancetes e relatórios gerenciais que permitam o acompanhamento do negócio e a tomada de decisões eficazes.",
+    "activities": [
+      "Escrituração e elaboração das demonstrações contábeis",
+      "Balancetes e balanços mensais e anuais",
+      "Demonstração do resultado do exercício",
+      "Análise de balanço e demonstrações financeiras",
+      "Contabilidade comercial e de serviços",
+      "Orientação na aplicação das legislações vigentes"
+    ]
+  },
+  {
+    "title": "Área Tributária",
+    "description": "Impostos, contribuições, taxas, recolhimentos mensais de tributos, atendimento ao fisco com entrega de declarações e atendimentos a fiscalização sempre denotam uma preocupação do empresário devido a alta carga tributária no Brasil. Contudo, entendemos que quando planejadas, as questões tributárias não são empecilhos a viabilidade do negócio e podem ser utilizadas para implementação de políticas de preços que melhor assegure ao cliente uma posição no mercado em que atua.",
+    "activities": [
+      "Escrituração de livros fiscais, contábeis e societários",
+      "Apuração de tributos: federais, estaduais e municipais ",
+      "Elaboração e entrega de obrigações acessórias",
+      "Orientação na aplicação das legislações vigentes"
+    ]
+  },
+  {
+    "title": "Área Trabalhista",
+    "description": "Desempenhamos um papel estratégico frente as rotinas e procedimentos obrigatórios dentro da relação da empresa com o colaborador. O foco é prever as possibilidades através da difusão de conhecimento, e planejar os trabalhos de modo que a relação empregatícia seja próspera e todos os direitos de ambas as partes satisfeitos.",
+    "activities": [
+      "Elaboração de folha de pagamento, encargos sociais e rotinas trabalhistas",
+      "Orientação na aplicação das legislações vigentes"
+    ]
+  },
+  {
+    "title": "Legalização e Procuradoria",
+    "description": "Realizando o acompanhamento de certidões negativas e viabilizando a inserção de nossos clientes em licitações através da apresentação de documentos hábeis, organizados e tempestivamente renovados, envidamos esforços para garantir que todos os aspectos legais sejam cumpridos no ambiente de cada empresa, de modo que possamos proporcionar  a segurança na continuidade de seus processos.",
+    "activities": [
+      "Abertura de empresas",
+      "Alterações contratuais",
+      "Encerramento de empresas",
+      "Registro de atas",
+      "Transformações societárias, cisões, incorporações e fusões",
+      "Obtenção de Alvarás",
+      "Regularização cadastral",
+      "Registro nos Conselhos Regionais",
+      "Obtenção de certidões de órgãos públicos",
+      "Blindagem Patrimonial de sócios"
+    ]
+  },
+  {
+    "title": "Consultoria Empresarial e Tributária",
+    "description": "Prestamos consultoria focados em consolidar a sustentabilidade e competitividade de cada cliente, seguindo uma linha de atuação eficaz e objetiva que apresenta soluções personalizadas a realidade de mercado, visando sempre o aprimoramento da gestão e o crescimento da empresa, conduzindo-a ao sucesso empresarial.",
+    "activities": [
+      "Auditoria de Arquivos eletrônicos",
+      "Ativo fixo: levantamento e implantação de controles de patrimoniais",
+      "Due Diligence",
+      "Auditoria Contábil, tributária, trabalhista e previdenciária",
+      "Impostos de renda pessoa jurídica",
+      "Impostos de renda pessoa física",
+      "Levantamento de débitos e contingências fiscais",
+      "Preparação e revisão de declaração",
+      "Recuperação de impostos",
+      "Revisão e assessoria: contábil, fiscal, trabalhista e previdenciária",
+      "Treinamentos técnicos sobre temas contábeis, tributários e afins"
+    ]
+  }
+]
