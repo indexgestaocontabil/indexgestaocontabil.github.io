@@ -1,31 +1,12 @@
+import heroContent from './assets/json/hero.json';
+
 export const MOBILE_BREAKPOINT = 768;
 
 export const PARAMS = {
   RIPPLES_COLOR: 'rgba(255, 255, 255, .3)',
 };
 
-export const HERO = {
-  team: {
-    background:
-      'https://paris-sensacional.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/2/12_1.jpg',
-    title: 'Executivos',
-    subtitle:
-      'Equipe dinâmica e qualificada para atender desde a abertura até o planejamento estratégico.',
-  },
-  services: {
-    background:
-      'https://paris-sensacional.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/2/12_1.jpg',
-    title: 'Serviços',
-    subtitle:
-      'Projetos com alto valor agregado, customizados para as necessidades e especificidades dos empresários, tendo o foco em micro, pequenas e médias empresas, dos mais variados ramos de atividade.',
-  },
-  contact: {
-    background:
-      'https://paris-sensacional.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/2/12_1.jpg',
-    title: 'Contato',
-    subtitle: 'Nosso time de atendimento ao cliente está esperando por você!',
-  },
-};
+export const HERO = heroContent;
 
 export const ACCOUNTS = {
   // email: 'hugodeiro@gmail.com',
