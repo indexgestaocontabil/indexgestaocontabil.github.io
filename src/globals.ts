@@ -1,5 +1,7 @@
 import heroContent from './assets/json/hero.json';
 import accountsContent from './assets/json/accounts.json';
+import rossanContent from './assets/json/rossan.json';
+import thiagoContent from './assets/json/thiago.json';
 
 export const MOBILE_BREAKPOINT = 768;
 
@@ -9,40 +11,9 @@ export const PARAMS = {
 
 export const HERO = heroContent;
 export const ACCOUNTS = accountsContent;
-
 export const MEMBERS = {
-  Rossan: {
-    name: 'Rossan Ferraz',
-    phone: '(71) 99181-3380',
-    linkedin: 'rossanferraz',
-    photo: `${process.env.PUBLIC_URL}/rossan.jpeg`,
-    about: [
-      'Contador formado pela Faculdade Batista Brasileira (FBB), com Pós-Graduação em Planejamento Tributário na Unime. Atua desde 2011 em assessoria e consultoria empresarial e tributária.',
-      'Rossan tem vasta experiência em ICMS no Estado da Bahia e atualmente é líder da equipe responsável pela área fiscal, atuando com foco na redução da carga tributária e recuperação de créditos tributários.',
-      'Possui experiência em projetos na área de Tributos Diretos e Indiretos, Pleitos de Incentivos SUDENE e Programa Desenvolve. Também é responsável pelo planejamento e revisão tributária de empresas, nos segmentos de comércio e serviço nos níveis industriais, atacadistas e varejistas.',
-    ],
-    specialities: [
-      'Apuração Fiscal',
-      'Benefícios Fiscais',
-      'Planejamento Tributário',
-    ],
-  },
-  Thiago: {
-    name: 'Thiago Anunciação',
-    phone: '(71) 98830-1015',
-    linkedin: 'thiago-anunciacao',
-    photo: `${process.env.PUBLIC_URL}/thiago.jpeg`,
-    about: [
-      'Contador formado pela Universidade Federal da Bahia (UFBA) com Pós-Graduação em Planejamento Tributário na Unime. Atua desde 2010 em assessoria e consultoria tributária.',
-      'Thiago tem vasta experiência em reorganização societária, revisão e regularização fiscal, acompanhamento de fiscalização, defesas administrativas, recuperação de crédito e planejamento tributário.',
-      'Também é responsável pela execução de tarefas relacionadas a apuração, análise e fechamento de balancetes e balanços, bem como na administração do passivo fiscal de empresas, acompanhamento de parcelamentos e renegociação de dívidas tributárias.',
-    ],
-    specialities: [
-      'Gestão de Passivo Fiscal',
-      'Reorganização Societária',
-      'Regularização e Parcelamento de Tributos',
-    ],
-  },
+  Rossan: rossanContent,
+  Thiago: thiagoContent,
 };
 
 export const REGEX = {
