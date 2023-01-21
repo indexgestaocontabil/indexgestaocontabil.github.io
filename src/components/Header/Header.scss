@@ -31,7 +31,18 @@
   }
 
   &-navigation {
+    @extend %df-aic-jsb;
+
     padding-left: $base-spacing-small;
+
+    &-item {
+      @extend %df-aic-jcc;
+
+      .divider {
+        color: var(--theme-color-4);
+        padding-left: $base-spacing-medium;
+      }
+    }
 
     &-link {
       color: $color-navigation-item;

@@ -9,19 +9,27 @@ import BurgerMenu from '../BurgerMenu/BurgerMenu';
 const Header = () => {
   const { isDesktop } = useBreakpointObserver();
 
-  const getNavigationItems = useCallback(() => {
+  const getNavigationItems = useCallback((withDivider: boolean) => {
     const routes = getRouteDefinitions();
 
     return routes.map(({ path, title }, index) => (
-      <NavLink
-        to={path}
-        key={`${path}-${index}`}
-        className={({ isActive }) =>
-          'header-navigation-link ' + (isActive ? 'active' : '')
-        }
+      <div
+        className="header-navigation-item"
+        key={`header-navigation-item-${index}`}
       >
-        {title}
-      </NavLink>
+        <NavLink
+          to={path}
+          key={`${path}-${index}`}
+          className={({ isActive }) =>
+            'header-navigation-link ' + (isActive ? 'active' : '')
+          }
+        >
+          {title}
+        </NavLink>
+        {withDivider && index < routes.length - 1 && (
+          <div className="divider">|</div>
+        )}
+      </div>
     ));
   }, []);
 
@@ -39,9 +47,9 @@ const Header = () => {
 
       <nav className="header-navigation">
         {isDesktop ? (
-          getNavigationItems()
+          getNavigationItems(true)
         ) : (
-          <BurgerMenu>{getNavigationItems()}</BurgerMenu>
+          <BurgerMenu>{getNavigationItems(false)}</BurgerMenu>
         )}
       </nav>
     </header>
