@@ -15,8 +15,8 @@
   background-size: 100% $header-height;
   background-repeat: no-repeat;
   background-position: top;
-
   padding: 0 $side-padding-desktop;
+  font-family: $font-family-2;
 
   @media #{$breakpoint-mobile} {
     padding: 0 $side-padding-mobile;

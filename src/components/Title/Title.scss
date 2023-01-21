@@ -6,6 +6,7 @@
   display: inline-block;
   margin: 0px;
   padding-bottom: $base-spacing-medium;
+  font-family: $font-family-2;
 
   &-subtitled {
     border-bottom: 4px solid var(--theme-color-3);
