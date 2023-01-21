@@ -1,12 +1,13 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React from 'react';
-import { ACCOUNTS, PARAMS, REGEX } from '../../globals';
+import { ACCOUNTS, HERO, PARAMS, REGEX } from '../../globals';
 import { getWhatsAppLink } from '../../utils/utilitary-functions';
 import './ContactPage.scss';
 import Ripples from 'react-ripples';
 import Title from '../../components/Title/Title';
 import useCustomSnackbar from '../../hooks/use-custom-snackbar';
 import { renderInstagramBoxLink } from '../../utils/utilitary-renders';
+import Hero from '../../components/Hero/Hero';
 
 type FormType = {
   name?: string;
@@ -76,133 +77,139 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="content-wrapper contact-page">
-      <Title content="Contato" />
+    <>
+      <Hero {...HERO.contact} />
 
-      <Formik
-        initialValues={initialPayload}
-        validate={onFormikValidate}
-        onSubmit={(values: FormType, { setSubmitting, resetForm }) => {
-          const phone = values.phone
-            ? `${values.phone} \n\tLink para Whatsapp: ${getWhatsAppLink(
-                values.phone
-              )}`
-            : '';
+      <div className="content-wrapper contact-page">
+        <Formik
+          initialValues={initialPayload}
+          validate={onFormikValidate}
+          onSubmit={(values: FormType, { setSubmitting, resetForm }) => {
+            const phone = values.phone
+              ? `${values.phone} \n\tLink para Whatsapp: ${getWhatsAppLink(
+                  values.phone
+                )}`
+              : '';
 
-          sendToFormSubmit(
-            JSON.stringify({
-              Nome: values.name,
-              'E-mail': values.email,
-              'Telefone / WhatsApp': phone,
-              Mensagem: values.message,
-            }),
-            () => {
-              const [firstName] = (values.name || '').split(' ');
-              const parsedFirstName = firstName ? `, ${firstName}` : '';
-              triggerSnackbar(
-                `Mensagem enviada com sucesso! Em breve entraremos em contato com você${parsedFirstName}.`
-              );
-              setSubmitting(false);
-              resetForm();
-            },
-            () => {
-              triggerSnackbar(
-                'Oops, não conseguimos enviar sua mensagem! Por favor, tente novamente mais tarde ou tente falar conosco via e-mail ou Telefone/WhatsApp.'
-              );
-            }
-          );
-        }}
-      >
-        {({ isSubmitting, dirty, isValid }) => (
-          <Form className="input-field-form">
-            <div className="input-field">
-              <label htmlFor="name" className="input-field-label">
-                Nome*
-              </label>
-              <Field type="text" name="name" className="input-field-content" />
-              <ErrorMessage
-                name="name"
-                component="div"
-                className="input-field-error"
-              />
-            </div>
+            sendToFormSubmit(
+              JSON.stringify({
+                Nome: values.name,
+                'E-mail': values.email,
+                'Telefone / WhatsApp': phone,
+                Mensagem: values.message,
+              }),
+              () => {
+                const [firstName] = (values.name || '').split(' ');
+                const parsedFirstName = firstName ? `, ${firstName}` : '';
+                triggerSnackbar(
+                  `Mensagem enviada com sucesso! Em breve entraremos em contato com você${parsedFirstName}.`
+                );
+                setSubmitting(false);
+                resetForm();
+              },
+              () => {
+                triggerSnackbar(
+                  'Oops, não conseguimos enviar sua mensagem! Por favor, tente novamente mais tarde ou tente falar conosco via e-mail ou Telefone/WhatsApp.'
+                );
+              }
+            );
+          }}
+        >
+          {({ isSubmitting, dirty, isValid }) => (
+            <Form className="input-field-form">
+              <div className="input-field">
+                <label htmlFor="name" className="input-field-label">
+                  Nome*
+                </label>
+                <Field
+                  type="text"
+                  name="name"
+                  className="input-field-content"
+                />
+                <ErrorMessage
+                  name="name"
+                  component="div"
+                  className="input-field-error"
+                />
+              </div>
 
-            <div className="input-field">
-              <label htmlFor="email" className="input-field-label">
-                E-mail*
-              </label>
-              <Field
-                type="email"
-                name="email"
-                className="input-field-content"
-              />
-              <ErrorMessage
-                name="email"
-                component="div"
-                className="input-field-error"
-              />
-            </div>
+              <div className="input-field">
+                <label htmlFor="email" className="input-field-label">
+                  E-mail*
+                </label>
+                <Field
+                  type="email"
+                  name="email"
+                  className="input-field-content"
+                />
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="input-field-error"
+                />
+              </div>
 
-            <div className="input-field">
-              <label htmlFor="phone" className="input-field-label">
-                Telefone/WhatsApp
-              </label>
-              <Field
-                type="tel"
-                name="phone"
-                className="input-field-content"
-                placeholder="DDD + Número"
-                minLength="10"
-                maxLength="11"
-              />
-              <ErrorMessage
-                name="phone"
-                component="div"
-                className="input-field-error"
-              />
-            </div>
+              <div className="input-field">
+                <label htmlFor="phone" className="input-field-label">
+                  Telefone/WhatsApp
+                </label>
+                <Field
+                  type="tel"
+                  name="phone"
+                  className="input-field-content"
+                  placeholder="DDD + Número"
+                  minLength="10"
+                  maxLength="11"
+                />
+                <ErrorMessage
+                  name="phone"
+                  component="div"
+                  className="input-field-error"
+                />
+              </div>
 
-            <div className="input-field">
-              <label htmlFor="message" className="input-field-label">
-                Mensagem*
-              </label>
-              <Field
-                as="textarea"
-                name="message"
-                className="input-field-content input-field-content-textarea"
-              />
-              <ErrorMessage
-                name="message"
-                component="div"
-                className="input-field-error"
-              />
-            </div>
+              <div className="input-field">
+                <label htmlFor="message" className="input-field-label">
+                  Mensagem*
+                </label>
+                <Field
+                  as="textarea"
+                  name="message"
+                  className="input-field-content input-field-content-textarea"
+                />
+                <ErrorMessage
+                  name="message"
+                  component="div"
+                  className="input-field-error"
+                />
+              </div>
 
-            <Ripples
-              color={PARAMS.RIPPLES_COLOR}
-              className="submit-button-ripples"
-            >
-              <button
-                type="submit"
-                className="submit-button"
-                disabled={isSubmitting || !dirty || !isValid}
+              <Ripples
+                color={PARAMS.RIPPLES_COLOR}
+                className="submit-button-ripples"
               >
-                Enviar Mensagem
-              </button>
-            </Ripples>
-          </Form>
-        )}
-      </Formik>
+                <button
+                  type="submit"
+                  className="submit-button"
+                  disabled={isSubmitting || !dirty || !isValid}
+                >
+                  Enviar Mensagem
+                </button>
+              </Ripples>
+            </Form>
+          )}
+        </Formik>
 
-      <Title
-        content="Acompanhe nossas redes sociais!"
-        level={3}
-        subtitled={false}
-        marginBottom={8}
-      />
+        <Title
+          content="Acompanhe nossas redes sociais!"
+          level={3}
+          subtitled={false}
+          marginBottom={8}
+        />
 
-      <div className="social-networks">{renderInstagramBoxLink()}</div>
-    </div>
+        <div className="social-networks">{renderInstagramBoxLink()}</div>
+      </div>
+    </>
   );
 };
 

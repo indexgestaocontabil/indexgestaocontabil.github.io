@@ -1,18 +1,20 @@
 import React from 'react';
-import Title from '../../components/Title/Title';
-import { MEMBERS } from '../../globals';
+import Hero from '../../components/Hero/Hero';
+import { HERO, MEMBERS } from '../../globals';
 import Member from './Member/Member';
 import './TeamPage.scss';
 
 const TeamPage = () => (
-  <div className="content-wrapper team-wrapper">
-    <Title content="Executivos" />
+  <>
+    <Hero {...HERO.team} />
 
-    <div className="team-members">
-      <Member {...MEMBERS.Rossan} />
-      <Member {...MEMBERS.Thiago} />
+    <div className="content-wrapper team-wrapper">
+      <div className="team-members">
+        <Member {...MEMBERS.Rossan} />
+        <Member {...MEMBERS.Thiago} />
+      </div>
     </div>
-  </div>
+  </>
 );
 
 export default TeamPage;

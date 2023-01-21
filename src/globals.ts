@@ -4,6 +4,29 @@ export const PARAMS = {
   RIPPLES_COLOR: 'rgba(255, 255, 255, .3)',
 };
 
+export const HERO = {
+  team: {
+    background:
+      'https://paris-sensacional.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/2/12_1.jpg',
+    title: 'Executivos',
+    subtitle:
+      'Equipe dinâmica e qualificada para atender desde a abertura até o planejamento estratégico.',
+  },
+  services: {
+    background:
+      'https://paris-sensacional.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/2/12_1.jpg',
+    title: 'Serviços',
+    subtitle:
+      'Projetos com alto valor agregado, customizados para as necessidades e especificidades dos empresários, tendo o foco em micro, pequenas e médias empresas, dos mais variados ramos de atividade.',
+  },
+  contact: {
+    background:
+      'https://paris-sensacional.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/2/12_1.jpg',
+    title: 'Contato',
+    subtitle: 'Nosso time de atendimento ao cliente está esperando por você!',
+  },
+};
+
 export const ACCOUNTS = {
   // email: 'hugodeiro@gmail.com',
   email: 'indexgestaocontabil@outlook.com',
@@ -33,8 +56,8 @@ export const MEMBERS = {
     linkedin: 'thiago-anunciacao',
     photo: `${process.env.PUBLIC_URL}/thiago.jpeg`,
     about: [
-      'Contador formado pela Universidade Federal da Bahia (UFBA) com Pós-Graduação em Planejamento Tributário na Unime. Atua desde 2010 em assessoria tributária.',
-      'Thiago tem vasta experiência em reorganização societária, revisão, regularização fiscal, acompanhamento de fiscalização, defesas administrativas, recuperação de crédito e planejamento tributário.',
+      'Contador formado pela Universidade Federal da Bahia (UFBA) com Pós-Graduação em Planejamento Tributário na Unime. Atua desde 2010 em assessoria e consultoria tributária.',
+      'Thiago tem vasta experiência em reorganização societária, revisão e regularização fiscal, acompanhamento de fiscalização, defesas administrativas, recuperação de crédito e planejamento tributário.',
       'Também é responsável pela execução de tarefas relacionadas a apuração, análise e fechamento de balancetes e balanços, bem como na administração do passivo fiscal de empresas, acompanhamento de parcelamentos e renegociação de dívidas tributárias.',
     ],
     specialities: [

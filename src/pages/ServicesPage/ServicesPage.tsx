@@ -2,12 +2,12 @@ import React from 'react';
 import Title from '../../components/Title/Title';
 import './ServicesPage.scss';
 import services from './services.json';
+import Hero from '../../components/Hero/Hero';
+import { HERO } from '../../globals';
 
 const ServicesPage = () => (
   <div className="services-page">
-    <div className="content-wrapper header-wrapper">
-      <Title content="Serviços que oferecemos" marginBottom={8} />
-    </div>
+    <Hero {...HERO.services} />
 
     {services.map(({ title, description, activities }, index) => (
       <section className="services-page-section" key={`service-${index}`}>
