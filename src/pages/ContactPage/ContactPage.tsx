@@ -1,6 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React from 'react';
-import { ACCOUNTS, HERO, PARAMS, REGEX } from '../../globals';
+import { ACCOUNTS, HERO, PARAMS } from '../../globals';
 import { getWhatsAppLink } from '../../utils/utilitary-functions';
 import './ContactPage.scss';
 import Ripples from 'react-ripples';
@@ -54,7 +54,7 @@ const ContactPage = () => {
     // Validar E-mail
     if (!values.email) {
       errors.email = 'E-mail é um campo obrigatório!';
-    } else if (!REGEX.VALIDATORS.EMAIL.test(values.email)) {
+    } else if (!PARAMS.REGEX.VALIDATORS.EMAIL.test(values.email)) {
       errors.email = 'E-mail inválido!';
     }
 

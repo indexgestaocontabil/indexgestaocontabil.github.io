@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { MOBILE_BREAKPOINT, VIEWPORT } from './globals';
+import { PARAMS } from './globals';
 import './index.scss';
 import AppRouter from './routes';
 
@@ -15,8 +15,8 @@ if (rootCssVars) {
     rootCssVars?.style.setProperty('--window-height', `${innerHeight}px`);
     rootCssVars?.style.setProperty('--window-width', `${innerWidth}px`);
 
-    VIEWPORT.IS_MOBILE = innerWidth <= MOBILE_BREAKPOINT;
-    VIEWPORT.IS_DESKTOP = !VIEWPORT.IS_MOBILE;
+    PARAMS.VIEWPORT.IS_MOBILE = innerWidth <= PARAMS.MOBILE_BREAKPOINT;
+    PARAMS.VIEWPORT.IS_DESKTOP = !PARAMS.VIEWPORT.IS_MOBILE;
   });
 
   // Triggers first resize event (onload)

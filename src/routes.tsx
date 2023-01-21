@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-import { VIEWPORT } from './globals';
+import { PARAMS } from './globals';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import HomePage from './pages/HomePage/HomePage';
@@ -51,7 +51,7 @@ export const getRouteDefinitions = (): RouteDefinition[] => [
 const AppRouter = () => (
   <Router>
     <SnackbarProvider
-      dense={VIEWPORT.IS_MOBILE}
+      dense={PARAMS.VIEWPORT.IS_MOBILE}
       anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
       className="custom-snackbar-item"
       maxSnack={3}
