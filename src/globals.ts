@@ -1,4 +1,5 @@
 import heroContent from './assets/json/hero.json';
+import accountsContent from './assets/json/accounts.json';
 
 export const MOBILE_BREAKPOINT = 768;
 
@@ -7,12 +8,7 @@ export const PARAMS = {
 };
 
 export const HERO = heroContent;
-
-export const ACCOUNTS = {
-  // email: 'hugodeiro@gmail.com',
-  email: 'indexgestaocontabil@outlook.com',
-  instagram: 'indexgestaocontabil',
-};
+export const ACCOUNTS = accountsContent;
 
 export const MEMBERS = {
   Rossan: {
