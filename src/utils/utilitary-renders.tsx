@@ -1,5 +1,5 @@
 import { GrInstagram, GrLinkedin } from 'react-icons/gr';
-import { MdEmail, MdPhone } from 'react-icons/md';
+import { AiOutlineWhatsApp, AiOutlineMail } from 'react-icons/ai';
 import ActionLink, {
   ActionLinkColorStyle,
 } from '../components/ActionLink/ActionLink';
@@ -34,7 +34,7 @@ export const renderWhatsAppActionLink = (
   const parsedName = name ? ` (${name})` : '';
 
   return renderActionLink(
-    MdPhone,
+    AiOutlineWhatsApp,
     phoneNumber + parsedName,
     getWhatsAppLink(parsedPhoneNumber),
     options
@@ -50,7 +50,7 @@ export const renderLinkedinActionLink = (
 export const renderEmailActionLink = (
   email = ACCOUNTS.email,
   options?: Options
-) => renderActionLink(MdEmail, email, `mailto:${email}`, options);
+) => renderActionLink(AiOutlineMail, email, `mailto:${email}`, options);
 
 export const renderInstagramActionLink = (
   account = ACCOUNTS.instagram,
