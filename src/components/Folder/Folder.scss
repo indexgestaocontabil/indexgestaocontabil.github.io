@@ -1,0 +1,36 @@
+@import '../../placeholders';
+@import '../../vars';
+
+.folder {
+  $folder-header-height: 48px;
+  $folder-header-bg: lightgray;
+
+  border-radius: 4px;
+  overflow: hidden;
+
+  &-header {
+    @extend %df-aic-jsb;
+
+    height: $folder-header-height;
+    background-color: $folder-header-bg;
+    padding: 8px 12px;
+
+    font-size: $font-size-1;
+    font-weight: 600;
+  }
+
+  &-content {
+    padding: 12px;
+    background-color: lighten($folder-header-bg, 10);
+  }
+
+  &-is-open {
+    .folder-header-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .folder-header-icon {
+    transition: transform 300ms ease-out;
+  }
+}
