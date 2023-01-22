@@ -1,7 +1,6 @@
-import heroContent from './assets/json/hero.json';
 import accountsContent from './assets/json/accounts.json';
-import rossanContent from './assets/json/rossan.json';
-import thiagoContent from './assets/json/thiago.json';
+import Rossan from './assets/json/rossan.json';
+import Thiago from './assets/json/thiago.json';
 
 // Global params
 
@@ -21,9 +20,5 @@ export const PARAMS = {
 
 // JSON Config file data
 
-export const HERO = heroContent;
 export const ACCOUNTS = accountsContent;
-export const MEMBERS = {
-  Rossan: rossanContent,
-  Thiago: thiagoContent,
-};
+export const MEMBERS = { Rossan, Thiago };
