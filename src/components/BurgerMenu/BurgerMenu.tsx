@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import './BurgerMenu.scss';
 import { MdMenu, MdClose } from 'react-icons/md';
 import Ripples from 'react-ripples';
@@ -18,14 +18,17 @@ const BurgerMenu = ({ children }: PropsType) => {
   const [isMenuOpen, toggleMenu] = useToggle(false);
   const location = useLocation();
 
-  useEffect(() => {
-    toggleMenu(false);
-  }, [location, toggleMenu]);
+  const changeMenuState = useCallback(
+    (state: boolean) => {
+      document.body.classList[state ? 'add' : 'remove']('no-scroll');
+      toggleMenu(state);
+    },
+    [toggleMenu]
+  );
 
-  const changeMenuState = (state: boolean) => {
-    document.body.classList[state ? 'add' : 'remove']('no-scroll');
-    toggleMenu(state);
-  };
+  useEffect(() => {
+    changeMenuState(false);
+  }, [location, changeMenuState]);
 
   const renderButton = (Icon: ValidIconType, callback: () => void) => (
     <Ripples
