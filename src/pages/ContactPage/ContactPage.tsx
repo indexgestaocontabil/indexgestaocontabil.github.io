@@ -1,6 +1,6 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React from 'react';
-import { ACCOUNTS, HERO, PARAMS } from '../../globals';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { ACCOUNTS, PARAMS } from '../../globals';
 import { getWhatsAppLink } from '../../utils/utilitary-functions';
 import './ContactPage.scss';
 import Ripples from 'react-ripples';
@@ -8,6 +8,7 @@ import Title from '../../components/Title/Title';
 import useCustomSnackbar from '../../hooks/use-custom-snackbar';
 import { renderInstagramBoxLink } from '../../utils/utilitary-renders';
 import Hero from '../../components/Hero/Hero';
+import ContactContent from './content.json';
 
 type FormType = {
   name?: string;
@@ -78,7 +79,7 @@ const ContactPage = () => {
 
   return (
     <>
-      <Hero {...HERO.contact} />
+      <Hero {...ContactContent.hero} />
 
       <div className="content-wrapper contact-page">
         <Formik
