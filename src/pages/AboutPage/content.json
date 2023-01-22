@@ -3,5 +3,46 @@
     "background": "https://paris-sensacional.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/2/12_1.jpg",
     "title": "Sobre Nós",
     "subtitle": "Conheça um pouco mais sobre a Index, como realizamos nossas atividades e em quê acreditamos."
+  },
+  "about": [
+    "Surgimos com o objetivo de oferecer um atendimento personalizado visando aprimorar a gestão de seu negócio, fornecendo informações contábeis confiáveis e tempestivas.",
+    "Ter a confiança dos clientes sempre foi a meta primordial de nossa organização, sejam pessoas físicas e jurídicas, inclusive estrangeiros, conduzindo os trabalhos de forma discreta e sigilosa.",
+    "Contamos com uma equipe dinâmica e qualificada para atender desde a abertura até o planejamento estratégico, fortalecendo as bases necessárias para a consolidação de empresas.",
+    "Executamos, de forma integrada, projetos com alto valor agregado, customizados para as necessidades e especificidades dos empresários, tendo o foco em micro, pequenas e médias empresas, dos mais variados ramos de atividade."
+  ],
+  "mission": "Contribuir para o crescimento dos nossos clientes oferendo informações contábeis confiáveis para a melhor tomada de decisão.",
+  "vision": "Tornar-se referência na área contábil, através da prestação de serviço com total transparência e compromisso com os nossos clientes.",
+  "values": {
+    "text": "A Index opera baseada em valores que são essenciais em toda relação entre nossa equipe e conosco e nossos clientes.",
+    "tags": [
+      {
+        "label": "Ética",
+        "description": "Mensurar e agregar valor ao patrimonio do cliente, com transparencia e integridade, obedecendo sempre aos principios que norteiam a profissão."
+      },
+      {
+        "label": "Excelência",
+        "description": "Investir no aperfeiçoamento continuo dos nossos colaboradores e na qualidade dos nossos serviços, atendendo com profissionalismo as necessidades e expectativas dos clientes."
+      },
+      {
+        "label": "Confiança",
+        "description": "Inspirar segurança e credibilidade, atuando com lealdade e solidificando parcerias."
+      },
+      {
+        "label": "Humanização",
+        "description": "Oferecer um tratamento personalizado, valorizando as relações e promovendo um ambiente saudável entre os nossos colaboradores."
+      },
+      {
+        "label": "Comprometimento",
+        "description": "Garantir o cumprimento da nossa missão e o alcance de metas, contribuindo para perpetuação dos negocios."
+      },
+      {
+        "label": "Inovação",
+        "description": "Oferecer soluções estratégicas inovadoras, utilizando a tecnologia para otimizar os processos e alcançar os resultados."
+      },
+      {
+        "label": "Humildade",
+        "description": "Garantir o tratamento saudável com qualquer pessoa, sem que haja distinção. garantir um olhar flexivel e uma visão analitica para qualquer situação."
+      }
+    ]
   }
 }

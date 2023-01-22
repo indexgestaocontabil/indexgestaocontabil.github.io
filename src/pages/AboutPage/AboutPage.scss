@@ -1,0 +1,60 @@
+@import '../../placeholders';
+@import '../../vars';
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.about {
+  &-us {
+    $logo-width: 260px;
+
+    @extend %df-aic-jsb;
+
+    .logo {
+      width: $logo-width;
+      animation: rotate 3s linear 0s infinite;
+    }
+
+    &-content {
+      width: calc(100% - #{$logo-width});
+      padding-right: $base-spacing-large;
+
+      &-paragraph {
+        line-height: 1.5em;
+        font-size: $font-size-1;
+      }
+    }
+  }
+
+  &-mission {
+    background: var(--theme-color-6);
+
+    &-content {
+      line-height: 1.5em;
+    }
+  }
+
+  &-vision {
+    &-content {
+      line-height: 1.5em;
+    }
+  }
+
+  &-values {
+    background: var(--theme-color-6);
+
+    &-text {
+      line-height: 1.5em;
+    }
+
+    &-content {
+      line-height: 1.5em;
+    }
+  }
+}
