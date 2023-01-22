@@ -19,6 +19,10 @@
   @media #{$breakpoint-phone} {
     flex-direction: column;
     background-position: bottom;
+
+    .footer-contacts {
+      align-items: center;
+    }
   }
 
   &-contacts {
