@@ -56,4 +56,16 @@
       line-height: 1.5em;
     }
   }
+
+  @media #{$breakpoint-mobile} {
+    .about-us {
+      flex-direction: column-reverse;
+
+      &-content {
+        width: 100%;
+        padding-top: $base-spacing-medium;
+        padding-right: 0;
+      }
+    }
+  }
 }
