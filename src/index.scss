@@ -117,14 +117,3 @@ body {
     margin-bottom: $spacing;
   }
 }
-
-.tag {
-  background: var(--theme-color-3);
-  color: var(--theme-color-4);
-  font-weight: 600;
-  font-size: $font-size-1;
-  border-radius: 6px;
-  padding: 8px 12px;
-  display: inline-block;
-  line-height: 1.5em;
-}

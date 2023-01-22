@@ -1,0 +1,10 @@
+@import '../../vars';
+
+.tag {
+  font-weight: 600;
+  font-size: $font-size-1;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: inline-block;
+  line-height: 1.5em;
+}

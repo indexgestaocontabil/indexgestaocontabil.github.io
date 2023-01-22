@@ -1,4 +1,5 @@
 import { ActionLinkColorStyle } from '../../../components/ActionLink/ActionLink';
+import Tag from '../../../components/Tag/Tag';
 import {
   renderLinkedinActionLink,
   renderWhatsAppActionLink,
@@ -53,12 +54,11 @@ const Member = ({
         </div>
         <div className="member-info-specialities">
           {specialities.map((specialityItem, index) => (
-            <div
+            <Tag
               key={name + index}
-              className="member-info-specialities-item tag"
-            >
-              {specialityItem}
-            </div>
+              className="member-info-specialities-item"
+              text={specialityItem}
+            />
           ))}
         </div>
       </div>

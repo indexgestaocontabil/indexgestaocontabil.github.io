@@ -4,6 +4,7 @@ import './ServicesPage.scss';
 import services from './services.json';
 import Hero from '../../components/Hero/Hero';
 import { HERO } from '../../globals';
+import Tag from '../../components/Tag/Tag';
 
 const ServicesPage = () => (
   <div className="services-page">
@@ -15,12 +16,10 @@ const ServicesPage = () => (
         <p className="services-page-section-description">{description}</p>
         <div className="tagset">
           {activities.map((activity, indexActivity) => (
-            <div
-              className="tag"
+            <Tag
               key={`service-${index}-activity-${indexActivity}`}
-            >
-              {activity}
-            </div>
+              text={activity}
+            />
           ))}
         </div>
       </section>
