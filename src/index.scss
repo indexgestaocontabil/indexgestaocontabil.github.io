@@ -134,3 +134,7 @@ body {
     background-color: var(--tooltip-background);
   }
 }
+
+.no-scroll {
+  overflow: hidden;
+}

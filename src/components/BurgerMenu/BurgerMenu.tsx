@@ -22,6 +22,11 @@ const BurgerMenu = ({ children }: PropsType) => {
     toggleMenu(false);
   }, [location, toggleMenu]);
 
+  const changeMenuState = (state: boolean) => {
+    document.body.classList[state ? 'add' : 'remove']('no-scroll');
+    toggleMenu(state);
+  };
+
   const renderButton = (Icon: ValidIconType, callback: () => void) => (
     <Ripples
       color={PARAMS.RIPPLES_COLOR}
@@ -35,17 +40,17 @@ const BurgerMenu = ({ children }: PropsType) => {
 
   return (
     <div className="menu-mobile">
-      {renderButton(MdMenu, () => toggleMenu(true))}
+      {renderButton(MdMenu, () => changeMenuState(true))}
 
       {isMenuOpen && (
         <div className="menu-mobile-opened-container">
           {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
           <div
             className="menu-mobile-opened-overlay"
-            onClick={() => toggleMenu(false)}
+            onClick={() => changeMenuState(false)}
           />
           <div className="menu-mobile-opened-content">
-            {renderButton(MdClose, () => toggleMenu(false))}
+            {renderButton(MdClose, () => changeMenuState(false))}
             <div className="menu-mobile-opened-content-links">{children}</div>
           </div>
         </div>
