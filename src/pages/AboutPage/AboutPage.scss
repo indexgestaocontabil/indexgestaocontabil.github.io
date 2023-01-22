@@ -19,6 +19,11 @@
     .logo {
       width: $logo-width;
       animation: rotate 3s linear 0s infinite;
+
+      @media #{$breakpoint-mobile} {
+        width: 200px;
+        animation: none;
+      }
     }
 
     &-content {
