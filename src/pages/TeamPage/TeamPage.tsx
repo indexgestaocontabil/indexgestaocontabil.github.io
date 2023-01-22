@@ -1,12 +1,13 @@
 import React from 'react';
 import Hero from '../../components/Hero/Hero';
-import { HERO, MEMBERS } from '../../globals';
+import { MEMBERS } from '../../globals';
 import Member from './Member/Member';
 import './TeamPage.scss';
+import TeamContent from './content.json';
 
 const TeamPage = () => (
   <>
-    <Hero {...HERO.team} />
+    <Hero {...TeamContent.hero} />
 
     <div className="content-wrapper team-wrapper">
       <div className="team-members">
