@@ -11,8 +11,11 @@
   --theme-color-2: #eef100;
   --theme-color-3: #0971c3;
   --theme-color-4: #fff;
-  --theme-color-5: rgb(9, 113, 195, 0.7);
+  --theme-color-5: rgba(9, 113, 195, 0.7);
   --theme-color-6: #f3f3f3;
+
+  --tooltip-color: #fff;
+  --tooltip-background: #0971c3;
 
   --menu-opener-bg: #0971c3;
   --menu-opener-icon: #fff;
@@ -115,5 +118,17 @@ body {
 
     margin-right: $spacing;
     margin-bottom: $spacing;
+  }
+}
+
+.tooltip-class {
+  background-color: var(--tooltip-background);
+  color: var(--tooltip-color);
+  max-width: 340px;
+  line-height: 1.5em;
+  font-size: $font-size-4;
+
+  &-arrow {
+    background-color: var(--tooltip-background);
   }
 }

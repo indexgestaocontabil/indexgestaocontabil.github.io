@@ -41,8 +41,8 @@ const AboutPage = () => (
       <p className="about-values-text">{AboutContent.values.text}</p>
 
       <div className="tagset">
-        {AboutContent.values.tags.map(({ label }, index) => (
-          <Tag text={label} key={`tag-${index}`} />
+        {AboutContent.values.tags.map(({ label, description }, index) => (
+          <Tag text={label} key={`tag-${index}`} tooltip={description} />
         ))}
       </div>
     </section>
