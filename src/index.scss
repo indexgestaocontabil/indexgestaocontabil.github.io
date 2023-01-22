@@ -57,6 +57,7 @@ body {
 }
 
 .container {
+  min-height: calc(100vh - #{$header-height + $footer-height});
   min-height: calc(var(--window-height) - #{$header-height + $footer-height});
 }
 
