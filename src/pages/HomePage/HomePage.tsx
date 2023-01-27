@@ -6,7 +6,7 @@ import Hero from '../../components/Hero/Hero';
 
 const HomePage = () => {
   const slides: JSX.Element[] = HomeContent.slides.map((slide, index) => (
-    <Hero {...slide} key={`hero-${index}}`} />
+    <Hero {...slide} key={`hero-${index}}`} height={60} heightUnit="vh" />
   ));
 
   return (
