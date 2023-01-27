@@ -1,6 +1,6 @@
 import React from 'react';
 import './HomePage.scss';
-import Slides from './Slides/Slides';
+import Slides from '../../components/Slides/Slides';
 import HomeContent from './content.json';
 import Hero from '../../components/Hero/Hero';
 
