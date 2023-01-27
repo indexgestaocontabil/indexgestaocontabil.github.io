@@ -6,6 +6,14 @@
 
   @extend %df-ais-jsb;
 
+  &#thiago {
+    @media #{$breakpoint-mobile} {
+      .member-photo {
+        background-position: 50% 30%;
+      }
+    }
+  }
+
   @media #{$breakpoint-mobile} {
     flex-wrap: wrap;
     justify-content: center;

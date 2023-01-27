@@ -7,6 +7,7 @@ import {
 import './Member.scss';
 
 type PropsType = {
+  id: string;
   name: string;
   phone: string;
   photo: string;
@@ -16,6 +17,7 @@ type PropsType = {
 };
 
 const Member = ({
+  id,
   name,
   phone,
   photo,
@@ -30,7 +32,7 @@ const Member = ({
   };
 
   return (
-    <div className="member">
+    <div className="member" id={id}>
       <div
         className="member-photo"
         style={{ backgroundImage: `url(${photo})` }}
