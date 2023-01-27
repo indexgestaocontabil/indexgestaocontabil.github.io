@@ -22,7 +22,16 @@
   }
 
   &-opened {
-    $menu-width: 220px;
+    $menu-width: 280px;
+
+    position: relative;
+
+    &-bg {
+      position: absolute;
+      opacity: 0.2;
+      left: 16px;
+      bottom: -175px;
+    }
 
     &-container {
       @extend %df-aic-jcc;

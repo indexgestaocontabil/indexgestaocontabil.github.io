@@ -7,6 +7,7 @@ import Ripples from 'react-ripples';
 import useToggle from '../../hooks/use-toggle';
 import { useLocation } from 'react-router-dom';
 import { PARAMS } from '../../globals';
+import logoIndex from '../../assets/img/logo-index-branca.png';
 
 type PropsType = {
   children: React.ReactNode;
@@ -53,6 +54,12 @@ const BurgerMenu = ({ children }: PropsType) => {
             onClick={() => changeMenuState(false)}
           />
           <div className="menu-mobile-opened-content">
+            <div className="menu-mobile-opened-bg">
+              <img
+                src={logoIndex}
+                alt="Background do Menu coma Logo da Index"
+              />
+            </div>
             {renderButton(MdClose, () => changeMenuState(false))}
             <div className="menu-mobile-opened-content-links">{children}</div>
           </div>
