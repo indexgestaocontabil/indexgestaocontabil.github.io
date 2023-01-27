@@ -1,0 +1,38 @@
+@import '../../placeholders';
+@import '../../vars';
+
+.featured-services {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .featured-item {
+    max-width: 800px;
+    margin-bottom: $base-spacing-large * 1.5;
+  }
+}
+
+.solution {
+  background: var(--theme-color-6);
+
+  &-items {
+    &-wrapper {
+      @extend %df-ais-jcsa-fww;
+
+      .solution-item {
+        background: var(--theme-color-4);
+      }
+    }
+
+    &-undertitle {
+      text-align: center;
+      font-size: $font-size-3;
+
+      a {
+        text-decoration: none;
+        color: var(--theme-color-3);
+        font-weight: 600;
+      }
+    }
+  }
+}

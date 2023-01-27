@@ -10,18 +10,28 @@ type PropsType = {
   additionalClassNames?: string;
   subtitled?: boolean;
   marginBottom?: number;
+  textAlign?: 'left' | 'center' | 'right';
 };
 
 const Title = ({
   content,
-  level,
+  level = 1,
   additionalClassNames,
   subtitled = true,
   marginBottom = 24,
+  textAlign = 'left',
 }: PropsType) => {
-  level = level || 1;
+  const styles = useMemo(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const styles: any = { marginBottom, textAlign };
 
-  const styles = useMemo(() => ({ marginBottom }), [marginBottom]);
+    // Without db centering doesnt have effect
+    if (textAlign === 'center') {
+      styles['display'] = 'block';
+    }
+
+    return styles;
+  }, [marginBottom, textAlign]);
 
   const getClassNames = useCallback(
     (level: ValidLevels) =>

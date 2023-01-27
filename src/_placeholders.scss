@@ -50,6 +50,13 @@
   flex-wrap: wrap;
 }
 
+%df-ais-jcsa-fww {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 %bsc-brnr-bpc {
   background-size: cover;
   background-repeat: no-repeat;

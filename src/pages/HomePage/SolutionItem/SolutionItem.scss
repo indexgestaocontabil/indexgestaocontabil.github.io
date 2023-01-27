@@ -1,0 +1,18 @@
+@import '../../../vars';
+
+.solution-item {
+  min-width: 340px;
+  margin-bottom: $base-spacing-large;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 0 4px var(--shadow-color);
+
+  @media #{$breakpoint-mobile} {
+    min-width: 100%;
+  }
+
+  &-description {
+    line-height: 1.4em;
+    font-size: $font-size-1;
+  }
+}

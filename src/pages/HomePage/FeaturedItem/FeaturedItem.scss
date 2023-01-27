@@ -1,0 +1,49 @@
+@import '../../../vars';
+@import '../../../placeholders';
+
+.featured-item {
+  $icon-size: 120px;
+
+  @extend %df-aic-jcc;
+
+  &-icon {
+    @extend %df-aic-jcc;
+
+    width: $icon-size;
+    height: $icon-size;
+    border-radius: 100%;
+
+    background: var(--theme-color-3);
+
+    svg {
+      fill: var(--theme-color-6);
+    }
+  }
+
+  &-content {
+    width: calc(100% - #{$icon-size});
+    padding-left: $base-spacing-large;
+
+    &-title {
+      padding: 0;
+    }
+
+    &-description {
+      margin: 0;
+      line-height: 1.5em;
+    }
+  }
+
+  @media #{$breakpoint-phone} {
+    flex-direction: column;
+
+    &-icon {
+      margin-bottom: $base-spacing-large;
+    }
+
+    &-content {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

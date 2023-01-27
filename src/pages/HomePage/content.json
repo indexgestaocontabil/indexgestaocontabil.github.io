@@ -15,5 +15,37 @@
       "title": "Serviços",
       "subtitle": "Projetos com alto valor agregado, customizados para as necessidades e especificidades dos empresários, tendo o foco em micro, pequenas e médias empresas, dos mais variados ramos de atividade."
     }
-  ]
+  ],
+  "featuredItems": {
+    "title": "Como nós trabalhamos",
+    "items": [
+      {
+        "icon": "support",
+        "title": "Atendimento Personalizado",
+        "description": "Gosta de se comunicar por WhatsApp? Ou prefere e-mail? Talvez ligação? Aqui na Index iremos lhe atender a forma que melhor lhe convier!"
+      },
+      {
+        "icon": "user-friends",
+        "title": "Horário de Atendimento Estendido",
+        "description": "Sabemos que nem sempre você tem tempo para ver questões de contabilidade em horas úteis. Por conta disso, nossos clientes contam com um horário de atendimento diferenciado e personalizado com o objetivo de melhor atender às suas necessidades!"
+      }
+    ]
+  },
+  "solutions": {
+    "title": "Conheça as nossas soluções",
+    "items": [
+      {
+        "title": "Contabilidade",
+        "description": "Contabilidade em geral, Escrita Fiscal, Folha de Pagamento, consistindo em parametrização de sistemas operacionais no que tange às regras fiscais, contábeis e financeiras, apurações de impostos e fechamento de balanço; Abertura e encerramento de empresas, alterações contratuais."
+      },
+      {
+        "title": "Consultoria",
+        "description": "Pesquisas, análises, treinamentos, elaboração de pareceres, interpretação de normas fiscais e societárias, todos relacionados a área Contábil e Fiscal."
+      },
+      {
+        "title": "Auditoria",
+        "description": "Atuamos em realizações de auditorias operacionais (financeiro, contas a pagar, contas a receber, estoques e etc) e auditorias contábeis, exceto em empresas de capital aberto."
+      }
+    ]
+  }
 }
