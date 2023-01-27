@@ -6,7 +6,11 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper.min.css';
 import './slides.scss';
 
-const Slides = () => {
+type PropsType = {
+  slides: JSX.Element[];
+};
+
+const Slides = ({ slides }: PropsType) => {
   SwiperCore.use([Pagination, Autoplay]);
 
   return (
@@ -17,18 +21,9 @@ const Slides = () => {
       pagination={{ clickable: true }}
       className="swiper-wrapper"
     >
-      <SwiperSlide>
-        <img src="/hero-bg/about-1.jpg" alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="/hero-bg/about-2.jpg" alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="/hero-bg/services-1.jpg" alt="" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="/hero-bg/services-2.jpg" alt="" />
-      </SwiperSlide>
+      {slides.map((slide, index) => (
+        <SwiperSlide key={`slide-${index}`}>{slide}</SwiperSlide>
+      ))}
     </Swiper>
   );
 };

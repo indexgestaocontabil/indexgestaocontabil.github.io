@@ -1,0 +1,19 @@
+{
+  "slides": [
+    {
+      "background": "/hero-bg/contact-2.jpg",
+      "title": "Contato",
+      "subtitle": "Nosso time de atendimento ao cliente está esperando por você!"
+    },
+    {
+      "background": "/hero-bg/about-1.jpg",
+      "title": "Sobre Nós",
+      "subtitle": "Conheça um pouco mais sobre a Index, como realizamos nossas atividades e em quê acreditamos."
+    },
+    {
+      "background": "/hero-bg/services-3.jpg",
+      "title": "Serviços",
+      "subtitle": "Projetos com alto valor agregado, customizados para as necessidades e especificidades dos empresários, tendo o foco em micro, pequenas e médias empresas, dos mais variados ramos de atividade."
+    }
+  ]
+}

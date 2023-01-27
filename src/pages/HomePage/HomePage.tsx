@@ -1,14 +1,22 @@
 import React from 'react';
 import './HomePage.scss';
 import Slides from './Slides/Slides';
+import HomeContent from './content.json';
+import Hero from '../../components/Hero/Hero';
 
-const HomePage = () => (
-  <>
-    <Slides />
-    <div className="content-wrapper">
-      <h1>Home Page</h1>
-    </div>
-  </>
-);
+const HomePage = () => {
+  const slides: JSX.Element[] = HomeContent.slides.map((slide, index) => (
+    <Hero {...slide} key={`hero-${index}}`} />
+  ));
+
+  return (
+    <>
+      <Slides slides={slides} />
+      <div className="content-wrapper">
+        <h1>Home Page</h1>
+      </div>
+    </>
+  );
+};
 
 export default HomePage;
