@@ -12,22 +12,26 @@
 
 .about {
   &-us {
-    $logo-width: 260px;
+    $logo-size: 260px;
 
     @extend %df-aic-jsb;
 
     .logo {
-      width: $logo-width;
+      width: $logo-size;
+      height: $logo-size;
       animation: rotate 3s linear 0s infinite;
 
       @media #{$breakpoint-mobile} {
-        width: 200px;
+        $logo-size-mobile: 200px;
+
+        width: $logo-size-mobile;
+        height: $logo-size-mobile;
         animation: none;
       }
     }
 
     &-content {
-      width: calc(100% - #{$logo-width});
+      width: calc(100% - #{$logo-size});
       padding-right: $base-spacing-large;
 
       &-paragraph {

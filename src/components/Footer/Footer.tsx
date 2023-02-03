@@ -5,11 +5,11 @@ import {
   renderWhatsAppActionLink,
 } from '../../utils/utilitary-renders';
 import { MEMBERS } from '../../globals';
-import logo from '../../assets/img/logo-small-amarela.png';
+import { ReactComponent as Logo } from '../../assets/img/logo-dourada.svg';
 
 const Footer = () => (
   <footer className="footer">
-    <img src={logo} alt="Logotipo da Index Gestão Contábil" />
+    <Logo className="logo" />
     <div className="footer-contacts">
       {renderInstagramActionLink()}
       {renderEmailActionLink()}

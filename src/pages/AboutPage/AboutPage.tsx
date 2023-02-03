@@ -2,9 +2,9 @@ import React from 'react';
 import Hero from '../../components/Hero/Hero';
 import './AboutPage.scss';
 import AboutContent from './content.json';
-import logo from '../../assets/img/logo-big-amarela.png';
 import Title from '../../components/Title/Title';
 import Tag from '../../components/Tag/Tag';
+import { ReactComponent as Logo } from '../../assets/img/logo-dourada.svg';
 
 const AboutPage = () => (
   <div className="about">
@@ -18,11 +18,7 @@ const AboutPage = () => (
         ))}
       </div>
 
-      <img
-        src={logo}
-        alt="Logotipo da Index Gestão Contábil"
-        className="logo"
-      />
+      <Logo className="logo" />
     </section>
 
     <section className="about-mission content-wrapper">

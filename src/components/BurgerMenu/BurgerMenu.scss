@@ -33,9 +33,10 @@
       top: 70vh;
       position: absolute;
 
-      img {
+      .logo-menu {
         opacity: 0.2;
-        width: 100%;
+        width: $menu-width;
+        height: $menu-width - 40px;
       }
     }
 

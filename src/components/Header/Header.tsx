@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import { getRouteDefinitions } from '../../routes';
 import './Header.scss';
-import logo from '../../assets/img/logo-small-amarela.png';
+import logo from '../../assets/img/logo-dourada.svg';
 import useBreakpointObserver from '../../hooks/use-breakpoint-observer';
 import { useCallback } from 'react';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
