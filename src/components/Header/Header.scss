@@ -12,7 +12,7 @@
   background: var(--theme-color-1);
 
   background-image: url('../../assets/img/wave-down.png');
-  background-size: 100% $header-height;
+  background-size: 100% 170px;
   background-repeat: no-repeat;
   background-position: top;
   padding: 0 $side-padding-desktop;
@@ -20,13 +20,26 @@
 
   @media #{$breakpoint-mobile} {
     padding: 0 $side-padding-mobile;
+    height: $header-height-mobile;
+    background-size: 100% $header-height - 30px;
+
+    .header-logo,
+    .header-logo-image {
+      $size: $header-height-mobile - 16px;
+
+      width: $size;
+      height: $size;
+    }
   }
 
   &-logo {
     width: $logo-width;
 
     &-image {
-      height: $header-height - 30px;
+      $size: $header-height - 20px;
+
+      height: $size;
+      width: $size;
     }
   }
 
@@ -41,6 +54,10 @@
       .divider {
         color: var(--theme-color-4);
         padding-left: $base-spacing-medium;
+      }
+
+      &.is-desktop {
+        padding-top: 60px;
       }
     }
 
