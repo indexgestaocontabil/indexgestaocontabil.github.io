@@ -1,19 +1,19 @@
 {
   "slides": [
     {
-      "background": "/hero-bg/contact-2.jpg",
+      "background": "/hero-bg/home-1.jpeg",
       "title": "Um escritório de contabilidade completo e moderno, focado em micro, pequenas e médias empresas, que trabalha em parceria com seu cliente."
     },
     {
-      "background": "/hero-bg/about-1.jpg",
+      "background": "/hero-bg/home-2.jpeg",
       "title": "Transparência e regularidade para a sustentação e crescimento da sua empresa."
     },
     {
-      "background": "/hero-bg/services-3.jpg",
+      "background": "/hero-bg/home-3.jpeg",
       "title": "Assessoria e consultoria que fazem a diferença no resultado do seu negócio."
     },
     {
-      "background": "/hero-bg/services-3.jpg",
+      "background": "/hero-bg/home-4.jpeg",
       "title": "Contabilidade consultiva que ajuda você a tomar decisões assertivas sobre o futuro do seu negócio."
     }
   ],
