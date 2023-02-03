@@ -13,7 +13,7 @@ const FeaturedItem = ({ title, description, Icon }: PropsType) => {
   return (
     <div className="featured-item">
       <div className="featured-item-icon">
-        {Icon && <Icon size={PARAMS.VIEWPORT.IS_MOBILE ? 64 : 46} />}
+        {Icon && <Icon size={PARAMS.VIEWPORT.IS_MOBILE ? 64 : 52} />}
       </div>
       <div className="featured-item-content">
         <Title

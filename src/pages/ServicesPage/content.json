@@ -31,7 +31,10 @@
       "title": "Área Trabalhista",
       "description": "Desempenhamos um papel estratégico frente as rotinas e procedimentos obrigatórios dentro da relação da empresa com o colaborador. O foco é prever as possibilidades através da difusão de conhecimento, e planejar os trabalhos de modo que a relação empregatícia seja próspera e todos os direitos de ambas as partes satisfeitos.",
       "activities": [
-        "Elaboração de folha de pagamento, encargos sociais e rotinas trabalhistas",
+        "Elaboração de folha de pagamento",
+        "Elaboração de folha de pró-labore",
+        "Cálculo de encargos sociais",
+        "Rotinas trabalhistas (admissão, rescisão, 13º salário, etc)",
         "Orientação na aplicação das legislações vigentes"
       ]
     },

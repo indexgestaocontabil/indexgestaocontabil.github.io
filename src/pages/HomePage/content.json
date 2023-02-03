@@ -25,9 +25,14 @@
         "description": "Gosta de se comunicar por WhatsApp? Ou prefere e-mail? Talvez ligação? Aqui na Index iremos lhe atender a forma que melhor lhe convier!"
       },
       {
-        "icon": "user-friends",
+        "icon": "time",
         "title": "Horário de Atendimento Estendido",
         "description": "Sabemos que nem sempre você tem tempo para ver questões de contabilidade em horas úteis. Por conta disso, nossos clientes contam com um horário de atendimento diferenciado e personalizado com o objetivo de melhor atender às suas necessidades!"
+      },
+      {
+        "icon": "user-friends",
+        "title": "Comunicação Humanizada",
+        "description": "Criamos laços e conexões duradouras com nossos clientes. Atendemos através de uma comunicação humanizada, mantendo uma abordagem fluida e natural. Somos proativos em relação às suas necessidades, respondemos prontamente às perguntas e oferecemos serviços de valor agregado."
       }
     ]
   },

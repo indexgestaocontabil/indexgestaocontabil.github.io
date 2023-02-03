@@ -7,7 +7,7 @@ import Slides from '../../components/Slides/Slides';
 import Title from '../../components/Title/Title';
 import { Link } from 'react-router-dom';
 import FeaturedItem from './FeaturedItem/FeaturedItem';
-import { BiSupport } from 'react-icons/bi';
+import { BiSupport, BiTimeFive } from 'react-icons/bi';
 import { FaUserFriends } from 'react-icons/fa';
 
 const getIcon = (icon: string) => {
@@ -17,6 +17,9 @@ const getIcon = (icon: string) => {
 
     case 'user-friends':
       return FaUserFriends;
+
+    case 'time':
+      return BiTimeFive;
   }
 };
 
