@@ -2,18 +2,19 @@
   "slides": [
     {
       "background": "/hero-bg/contact-2.jpg",
-      "title": "Contato",
-      "subtitle": "Nosso time de atendimento ao cliente está esperando por você!"
+      "title": "Um escritório de contabilidade completo e moderno, focado em micro, pequenas e médias empresas, que trabalha em parceria com seu cliente."
     },
     {
       "background": "/hero-bg/about-1.jpg",
-      "title": "Sobre Nós",
-      "subtitle": "Conheça um pouco mais sobre a Index, como realizamos nossas atividades e em quê acreditamos."
+      "title": "Transparência e regularidade para a sustentação e crescimento da sua empresa."
     },
     {
       "background": "/hero-bg/services-3.jpg",
-      "title": "Serviços",
-      "subtitle": "Projetos com alto valor agregado, customizados para as necessidades e especificidades dos empresários, tendo o foco em micro, pequenas e médias empresas, dos mais variados ramos de atividade."
+      "title": "Assessoria e consultoria que fazem a diferença no resultado do seu negócio."
+    },
+    {
+      "background": "/hero-bg/services-3.jpg",
+      "title": "Contabilidade consultiva que ajuda você a tomar decisões assertivas sobre o futuro do seu negócio."
     }
   ],
   "featuredItems": {
@@ -41,15 +42,15 @@
     "items": [
       {
         "title": "Contabilidade",
-        "description": "Contabilidade em geral, Escrita Fiscal, Folha de Pagamento, consistindo em parametrização de sistemas operacionais no que tange às regras fiscais, contábeis e financeiras, apurações de impostos e fechamento de balanço; Abertura e encerramento de empresas, alterações contratuais."
+        "description": "Trabalhamos com contabilidade em geral, escrita fiscal e folha de pagamento. Além disso, atuamos também na abertura e fechamento de empresas, bem como nas alterações contratuais que forem necessárias."
       },
       {
         "title": "Consultoria",
-        "description": "Pesquisas, análises, treinamentos, elaboração de pareceres, interpretação de normas fiscais e societárias, todos relacionados a área Contábil e Fiscal."
+        "description": "Nós atuamos com diversos ramos da área de consultoria em contabilidade, tais quais: pesquisa, análise técnica, treinamentos, elaboração de parecer, interpretação de normas fiscais e societárias relacionadas a área contábil e fiscal."
       },
       {
         "title": "Auditoria",
-        "description": "Atuamos em realizações de auditorias operacionais (financeiro, contas a pagar, contas a receber, estoques e etc) e auditorias contábeis, exceto em empresas de capital aberto."
+        "description": "Aqui na Index atuamos também na realização de auditorias operacionais, onde analisamos o contexto financeiro da sua empresa (contas a pagar, receber, estoque, entre outros) bem como conduzimos também auditorias contábeis e revisão de procedimentos fiscais."
       }
     ]
   }

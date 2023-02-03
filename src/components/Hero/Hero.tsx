@@ -6,6 +6,7 @@ type PropsType = {
   subtitle?: string;
   height?: number;
   heightUnit?: 'px' | 'vh';
+  className?: string;
 };
 
 const Hero = ({
@@ -14,9 +15,10 @@ const Hero = ({
   subtitle,
   height,
   heightUnit,
+  className,
 }: PropsType) => (
   <div
-    className="hero content-wrapper"
+    className={`hero content-wrapper ${className}`}
     style={{
       backgroundImage: `url(${background})`,
       height: `${height || 340}${heightUnit || 'px'}`,

@@ -25,7 +25,13 @@ const getIcon = (icon: string) => {
 
 const HomePage = () => {
   const slides: JSX.Element[] = HomeContent.slides.map((slide, index) => (
-    <Hero {...slide} key={`hero-${index}}`} height={60} heightUnit="vh" />
+    <Hero
+      {...slide}
+      key={`hero-${index}}`}
+      height={60}
+      heightUnit="vh"
+      className="slide-hero"
+    />
   ));
 
   const renderFeaturedServices = () => (
@@ -82,11 +88,11 @@ const HomePage = () => {
   );
 
   return (
-    <>
+    <div className="home">
       <Slides slides={slides} />
       {renderFeaturedServices()}
       {renderSolutions()}
-    </>
+    </div>
   );
 };
 
