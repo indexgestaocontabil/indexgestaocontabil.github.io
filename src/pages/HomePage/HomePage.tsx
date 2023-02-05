@@ -89,7 +89,6 @@ const HomePage = () => {
 
   return (
     <div className="home">
-      <h1>Auto refresh Netlify Test #1!</h1>
       <Slides slides={slides} />
       {renderFeaturedServices()}
       {renderSolutions()}
