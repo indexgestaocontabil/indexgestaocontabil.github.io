@@ -40,9 +40,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-logo">
-        <NavLink to="/">
-          <Logo className="header-logo-image" />
-        </NavLink>
+        <Logo className="header-logo-image" />
       </div>
 
       <nav className={`header-navigation`}>
