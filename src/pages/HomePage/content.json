@@ -18,21 +18,10 @@
     "title": "Por que escolher a INDEX?",
     "subtitle": "Descubra o que nos torna diferentes",
     "items": [
-      {
-        "icon": "user-check",
-        "title": "Atendimento Personalizado",
-        "description": "Cada cliente é único e merece atenção especial."
-      },
-      {
-        "icon": "clock",
-        "title": "Horário Flexível",
-        "description": "Estamos disponíveis quando você precisar."
-      },
-      {
-        "icon": "heart",
-        "title": "Equipe Humanizada",
-        "description": "Mais do que números, cuidamos de pessoas."
-      }
+      { "icon": "user-check", "title": "Atendimento direto", "description": "Você fala com quem resolve." },
+      { "icon": "compass", "title": "Estrutura tributária antes da abertura", "description": "Planejamento antes da execução." },
+      { "icon": "target", "title": "Orientação antes da decisão", "description": "Prevenção antes do problema." },
+      { "icon": "clock", "title": "Disponibilidade real", "description": "Comunicação além do horário comercial." }
     ]
   },
   "services": {
