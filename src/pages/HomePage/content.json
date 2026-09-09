@@ -1,57 +1,127 @@
 {
-  "slides": [
-    {
-      "background": "/hero-bg/home-1.jpeg",
-      "title": "Um escritório de contabilidade completo e moderno, focado em micro, pequenas e médias empresas, que trabalha em parceria com seu cliente."
-    },
-    {
-      "background": "/hero-bg/home-2.jpeg",
-      "title": "Transparência e regularidade para a sustentação e crescimento da sua empresa."
-    },
-    {
-      "background": "/hero-bg/home-3.jpeg",
-      "title": "Assessoria e consultoria que fazem a diferença no resultado do seu negócio."
-    },
-    {
-      "background": "/hero-bg/home-4.jpeg",
-      "title": "Contabilidade consultiva que ajuda você a tomar decisões assertivas sobre o futuro do seu negócio."
-    }
+  "hero": {
+    "badge": "Desde 2012 transformando negócios",
+    "titleLine1": "Um novo conceito de",
+    "titleLine2": "administrar seu negócio",
+    "subtitle": "A INDEX traz segurança e tranquilidade para que você foque no crescimento da sua empresa. Cuidamos da sua contabilidade com excelência e dedicação.",
+    "primaryCta": "Solicitar Proposta",
+    "secondaryCta": "Conhecer Serviços"
+  },
+  "stats": [
+    { "value": "12+", "label": "Anos de Experiência" },
+    { "value": "500+", "label": "Clientes Atendidos" },
+    { "value": "98%", "label": "Satisfação" },
+    { "value": "24h", "label": "Tempo de Resposta" }
   ],
-  "featuredItems": {
-    "title": "Como nós trabalhamos",
+  "diferenciais": {
+    "eyebrow": "Diferenciais",
+    "title": "Por que escolher a INDEX?",
+    "subtitle": "Descubra o que nos torna diferentes",
     "items": [
       {
-        "icon": "support",
+        "icon": "user-check",
         "title": "Atendimento Personalizado",
-        "description": "Gosta de se comunicar por WhatsApp? Ou prefere e-mail? Talvez ligação? Aqui na Index iremos lhe atender a forma que melhor lhe convier!"
+        "description": "Cada cliente é único e merece atenção especial."
       },
       {
-        "icon": "time",
-        "title": "Horário de Atendimento Estendido",
-        "description": "Sabemos que nem sempre você tem tempo para ver questões de contabilidade em horas úteis. Por conta disso, nossos clientes contam com um horário de atendimento diferenciado e personalizado com o objetivo de melhor atender às suas necessidades!"
+        "icon": "clock",
+        "title": "Horário Flexível",
+        "description": "Estamos disponíveis quando você precisar."
       },
       {
-        "icon": "user-friends",
-        "title": "Comunicação Humanizada",
-        "description": "Criamos laços e conexões duradouras com nossos clientes. Atendemos através de uma comunicação humanizada, mantendo uma abordagem fluida e natural. Somos proativos em relação às suas necessidades, respondemos prontamente às perguntas e oferecemos serviços de valor agregado."
+        "icon": "heart",
+        "title": "Equipe Humanizada",
+        "description": "Mais do que números, cuidamos de pessoas."
       }
     ]
   },
-  "solutions": {
-    "title": "Conheça as nossas soluções",
+  "services": {
+    "eyebrow": "Serviços",
+    "title": "Soluções completas para sua empresa",
+    "subtitle": "Da abertura do CNPJ à gestão tributária avançada, oferecemos serviços especializados que sua empresa precisa, com qualidade e agilidade.",
     "items": [
       {
+        "icon": "calculator",
         "title": "Contabilidade",
-        "description": "Trabalhamos com contabilidade em geral, escrita fiscal e folha de pagamento. Além disso, atuamos também na abertura e fechamento de empresas, bem como nas alterações contratuais que forem necessárias."
+        "description": "Gestão contábil completa.",
+        "bullets": ["Escrituração digital", "Relatórios gerenciais", "Análise de indicadores"]
       },
       {
+        "icon": "file",
+        "title": "Fiscal",
+        "description": "Compliance tributário.",
+        "bullets": ["Apuração de impostos", "Obrigações acessórias", "Planejamento tributário"]
+      },
+      {
+        "icon": "users",
+        "title": "Departamento Pessoal",
+        "description": "Gestão de pessoas.",
+        "bullets": ["Folha de pagamento", "Admissões e rescisões", "Férias e 13º"]
+      },
+      {
+        "icon": "briefcase",
+        "title": "Societário",
+        "description": "Regularização empresarial.",
+        "bullets": ["Abertura de empresas", "Alterações contratuais", "Baixa de empresas"]
+      },
+      {
+        "icon": "compass",
         "title": "Consultoria",
-        "description": "Nós atuamos com diversos ramos da área de consultoria em contabilidade, tais quais: pesquisa, análise técnica, treinamentos, elaboração de parecer, interpretação de normas fiscais e societárias relacionadas a área contábil e fiscal."
+        "description": "Orientação especializada.",
+        "bullets": ["Análise tributária", "Planejamento estratégico", "Otimização fiscal"]
       },
       {
-        "title": "Auditoria",
-        "description": "Aqui na Index atuamos também na realização de auditorias operacionais, onde analisamos o contexto financeiro da sua empresa (contas a pagar, receber, estoque, entre outros) bem como conduzimos também auditorias contábeis e revisão de procedimentos fiscais."
+        "icon": "shield",
+        "title": "Legalização",
+        "description": "Documentação em dia.",
+        "bullets": ["Alvarás", "Licenças", "Certidões"]
       }
     ]
+  },
+  "cta": {
+    "title": "Traga sua contabilidade para a INDEX",
+    "subtitle": "Migre sem burocracia. Cuidamos de toda a transição para que você não precise se preocupar com nada.",
+    "buttonLabel": "Fale com especialista",
+    "whatsappMessage": "Olá, vim de seu site e preciso de um contador!"
+  },
+  "about": {
+    "eyebrow": "Sobre Nós",
+    "title": "Conheça a INDEX Gestão Contábil",
+    "paragraphs": [
+      "Há mais de 12 anos no mercado, a INDEX Gestão Contábil nasceu com o propósito de transformar a relação entre empresas e contabilidade.",
+      "Nossa equipe é formada por profissionais altamente qualificados, comprometidos em oferecer soluções personalizadas para cada cliente."
+    ],
+    "pillars": [
+      { "icon": "target", "title": "Missão", "description": "Facilitar a gestão empresarial através de serviços contábeis de excelência." },
+      { "icon": "eye", "title": "Visão", "description": "Ser referência em contabilidade consultiva na Bahia." },
+      { "icon": "award", "title": "Valores", "description": "Ética, transparência, comprometimento e inovação." }
+    ],
+    "stats": [
+      { "value": "12+", "label": "Anos no mercado" },
+      { "value": "500+", "label": "Clientes atendidos" },
+      { "value": "10+", "label": "Profissionais" },
+      { "value": "100%", "label": "Comprometimento" }
+    ],
+    "quote": "Nosso compromisso é com o sucesso do seu negócio.",
+    "saibaMaisLabel": "Saiba mais",
+    "whatsappMessage": "Olá, vim de seu site e preciso de um contador!"
+  },
+  "team": {
+    "eyebrow": "Nossa Equipe",
+    "title": "Profissionais dedicados ao seu sucesso",
+    "subtitle": "Conheça nossa equipe"
+  },
+  "clients": {
+    "eyebrow": "Clientes",
+    "title": "Empresas que confiam na INDEX",
+    "subtitle": "Empresas de diferentes segmentos que crescem com acompanhamento próximo, orientação clara e segurança técnica.",
+    "logos": [
+      { "name": "Oasys Digital", "segment": "Serviços de Tecnologia", "file": "/clients/oasys.png" },
+      { "name": "Índice Empresarial", "segment": "Serviços de escritório virtual", "file": "/clients/indice-empresarial.png" },
+      { "name": "Italínea - Mais Design", "segment": "Comércio de móveis planejados", "file": "/clients/mais-design.jpeg" },
+      { "name": "CBM Agro Gestão de Passivos", "segment": "Soluções jurídicas", "file": "/clients/cbm.jpeg" },
+      { "name": "Escritório da Beleza", "segment": "Salão de beleza", "file": "/clients/escritorio-da-beleza.png" }
+    ],
+    "footerNote": "Atuamos ao lado de empresas dos setores de tecnologia, saúde, educação, produção audiovisual, alimentação, comércio e estruturas patrimoniais, mantendo o mesmo padrão de organização contábil e estratégia tributária."
   }
 }
