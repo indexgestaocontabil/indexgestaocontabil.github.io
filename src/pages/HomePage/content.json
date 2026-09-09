@@ -1,6 +1,6 @@
 {
   "hero": {
-    "badge": "Desde 2014 transformando negócios",
+    "badge": "Desde 2012 transformando negócios",
     "titleLine1": "Um novo conceito de",
     "titleLine2": "administrar seu negócio",
     "subtitle": "A INDEX traz segurança e tranquilidade para que você foque no crescimento da sua empresa. Cuidamos da sua contabilidade com excelência e dedicação.",
@@ -8,20 +8,53 @@
     "secondaryCta": "Conhecer Serviços"
   },
   "stats": [
-    { "value": "12+", "label": "Anos de Experiência" },
-    { "value": "500+", "label": "Clientes Atendidos" },
-    { "value": "98%", "label": "Satisfação" },
-    { "value": "24h", "label": "Tempo de Resposta" }
+    {
+      "value": "12+",
+      "label": "Anos de Experiência"
+    },
+    {
+      "value": "500+",
+      "label": "Clientes Atendidos"
+    },
+    {
+      "value": "98%",
+      "label": "Satisfação"
+    },
+    {
+      "value": "24h",
+      "label": "Tempo de Resposta"
+    }
   ],
   "diferenciais": {
     "eyebrow": "Diferenciais",
     "title": "Por que escolher a INDEX?",
     "subtitle": "Descubra o que nos torna diferentes",
     "items": [
-      { "icon": "user-check", "title": "Atendimento direto", "description": "Você fala com quem resolve." },
-      { "icon": "compass", "title": "Estrutura tributária antes da abertura", "description": "Planejamento antes da execução." },
-      { "icon": "target", "title": "Orientação antes da decisão", "description": "Prevenção antes do problema." },
-      { "icon": "clock", "title": "Disponibilidade real", "description": "Comunicação além do horário comercial." }
+      {
+        "icon": "user-check",
+        "title": "Atendimento Personalizado",
+        "description": "Você fala com quem resolve — sem setores, sem robô, sem intermediários."
+      },
+      {
+        "icon": "clock",
+        "title": "Disponibilidade prática",
+        "description": "Atendimento fora do horário comercial quando você precisar."
+      },
+      {
+        "icon": "message",
+        "title": "Comunicação acessível",
+        "description": "Explicamos de forma simples, até você entender — sem linguagem técnica desnecessária."
+      },
+      {
+        "icon": "target",
+        "title": "Orientação antes da decisão",
+        "description": "Antes de contratar, investir ou alterar algo, você recebe direcionamento claro."
+      },
+      {
+        "icon": "heart",
+        "title": "Equipe Humanizada",
+        "description": "Mais do que números, cuidamos de pessoas."
+      }
     ]
   },
   "services": {
@@ -33,37 +66,61 @@
         "icon": "calculator",
         "title": "Contabilidade",
         "description": "Gestão contábil completa.",
-        "bullets": ["Escrituração digital", "Relatórios gerenciais", "Análise de indicadores"]
+        "bullets": [
+          "Escrituração digital",
+          "Relatórios gerenciais",
+          "Análise de indicadores"
+        ]
       },
       {
         "icon": "file",
         "title": "Fiscal",
         "description": "Compliance tributário.",
-        "bullets": ["Apuração de impostos", "Obrigações acessórias", "Planejamento tributário"]
+        "bullets": [
+          "Apuração de impostos",
+          "Obrigações acessórias",
+          "Planejamento tributário"
+        ]
       },
       {
         "icon": "users",
         "title": "Departamento Pessoal",
         "description": "Gestão de pessoas.",
-        "bullets": ["Folha de pagamento", "Admissões e rescisões", "Férias e 13º"]
+        "bullets": [
+          "Folha de pagamento",
+          "Admissões e rescisões",
+          "Férias e 13º"
+        ]
       },
       {
         "icon": "briefcase",
         "title": "Societário",
         "description": "Regularização empresarial.",
-        "bullets": ["Abertura de empresas", "Alterações contratuais", "Baixa de empresas"]
+        "bullets": [
+          "Abertura de empresas",
+          "Alterações contratuais",
+          "Baixa de empresas"
+        ]
       },
       {
         "icon": "compass",
         "title": "Consultoria",
         "description": "Orientação especializada.",
-        "bullets": ["Análise tributária", "Planejamento estratégico", "Otimização fiscal"]
+        "bullets": [
+          "Análise tributária",
+          "Planejamento estratégico",
+          "Otimização fiscal"
+        ]
       },
       {
         "icon": "shield",
         "title": "Legalização",
         "description": "Documentação em dia.",
-        "bullets": ["Alvarás", "Licenças", "Certidões"]
+        "bullets": [
+          "Alvarás",
+          "Licenças",
+          "Certidões"
+        ]
       }
     ]
   },
@@ -81,15 +138,39 @@
       "Nossa equipe é formada por profissionais altamente qualificados, comprometidos em oferecer soluções personalizadas para cada cliente."
     ],
     "pillars": [
-      { "icon": "target", "title": "Missão", "description": "Facilitar a gestão empresarial através de serviços contábeis de excelência." },
-      { "icon": "eye", "title": "Visão", "description": "Ser referência em contabilidade consultiva na Bahia." },
-      { "icon": "award", "title": "Valores", "description": "Ética, transparência, comprometimento e inovação." }
+      {
+        "icon": "target",
+        "title": "Missão",
+        "description": "Facilitar a gestão empresarial através de serviços contábeis de excelência."
+      },
+      {
+        "icon": "eye",
+        "title": "Visão",
+        "description": "Ser referência em contabilidade consultiva na Bahia."
+      },
+      {
+        "icon": "award",
+        "title": "Valores",
+        "description": "Ética, transparência, comprometimento e inovação."
+      }
     ],
     "stats": [
-      { "value": "12+", "label": "Anos no mercado" },
-      { "value": "500+", "label": "Clientes atendidos" },
-      { "value": "10+", "label": "Profissionais" },
-      { "value": "100%", "label": "Comprometimento" }
+      {
+        "value": "12+",
+        "label": "Anos no mercado"
+      },
+      {
+        "value": "500+",
+        "label": "Clientes atendidos"
+      },
+      {
+        "value": "10+",
+        "label": "Profissionais"
+      },
+      {
+        "value": "100%",
+        "label": "Comprometimento"
+      }
     ],
     "quote": "Nosso compromisso é com o sucesso do seu negócio.",
     "saibaMaisLabel": "Saiba mais",
@@ -105,11 +186,31 @@
     "title": "Empresas que confiam na INDEX",
     "subtitle": "Empresas de diferentes segmentos que crescem com acompanhamento próximo, orientação clara e segurança técnica.",
     "logos": [
-      { "name": "Oasys Digital", "segment": "Serviços de Tecnologia", "file": "/oasys.png" },
-      { "name": "Índice Empresarial", "segment": "Serviços de escritório virtual", "file": "/indice-empresarial.png" },
-      { "name": "Italínea - Mais Design", "segment": "Comércio de móveis planejados", "file": "/mais-design.jpeg" },
-      { "name": "CBM Agro Gestão de Passivos", "segment": "Soluções jurídicas", "file": "/cbm.jpeg" },
-      { "name": "Escritório da Beleza", "segment": "Salão de beleza", "file": "/escritorio-da-beleza.png" }
+      {
+        "name": "Oasys Digital",
+        "segment": "Serviços de Tecnologia",
+        "file": "/clients/oasys.png"
+      },
+      {
+        "name": "Índice Empresarial",
+        "segment": "Serviços de escritório virtual",
+        "file": "/clients/indice-empresarial.png"
+      },
+      {
+        "name": "Italínea - Mais Design",
+        "segment": "Comércio de móveis planejados",
+        "file": "/clients/mais-design.jpeg"
+      },
+      {
+        "name": "CBM Agro Gestão de Passivos",
+        "segment": "Soluções jurídicas",
+        "file": "/clients/cbm.jpeg"
+      },
+      {
+        "name": "Escritório da Beleza",
+        "segment": "Salão de beleza",
+        "file": "/clients/escritorio-da-beleza.png"
+      }
     ],
     "footerNote": "Atuamos ao lado de empresas dos setores de tecnologia, saúde, educação, produção audiovisual, alimentação, comércio e estruturas patrimoniais, mantendo o mesmo padrão de organização contábil e estratégia tributária."
   }

@@ -10,6 +10,7 @@ import {
   FiBriefcase,
   FiCompass,
   FiShield,
+  FiMessageCircle,
 } from 'react-icons/fi';
 import { FaCalculator } from 'react-icons/fa';
 import { IconType } from '../../types';
@@ -27,6 +28,7 @@ const ICONS: Record<string, IconType> = {
   compass: FiCompass,
   shield: FiShield,
   calculator: FaCalculator,
+  message: FiMessageCircle,
 };
 
 export const getIconByName = (name: string): IconType =>
