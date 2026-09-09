@@ -1,6 +1,6 @@
 {
   "hero": {
-    "badge": "Desde 2012 transformando negócios",
+    "badge": "Desde 2014 transformando negócios",
     "titleLine1": "Um novo conceito de",
     "titleLine2": "administrar seu negócio",
     "subtitle": "A INDEX traz segurança e tranquilidade para que você foque no crescimento da sua empresa. Cuidamos da sua contabilidade com excelência e dedicação.",
@@ -116,11 +116,11 @@
     "title": "Empresas que confiam na INDEX",
     "subtitle": "Empresas de diferentes segmentos que crescem com acompanhamento próximo, orientação clara e segurança técnica.",
     "logos": [
-      { "name": "Oasys Digital", "segment": "Serviços de Tecnologia", "file": "/clients/oasys.png" },
-      { "name": "Índice Empresarial", "segment": "Serviços de escritório virtual", "file": "/clients/indice-empresarial.png" },
-      { "name": "Italínea - Mais Design", "segment": "Comércio de móveis planejados", "file": "/clients/mais-design.jpeg" },
-      { "name": "CBM Agro Gestão de Passivos", "segment": "Soluções jurídicas", "file": "/clients/cbm.jpeg" },
-      { "name": "Escritório da Beleza", "segment": "Salão de beleza", "file": "/clients/escritorio-da-beleza.png" }
+      { "name": "Oasys Digital", "segment": "Serviços de Tecnologia", "file": "/oasys.png" },
+      { "name": "Índice Empresarial", "segment": "Serviços de escritório virtual", "file": "/indice-empresarial.png" },
+      { "name": "Italínea - Mais Design", "segment": "Comércio de móveis planejados", "file": "/mais-design.jpeg" },
+      { "name": "CBM Agro Gestão de Passivos", "segment": "Soluções jurídicas", "file": "/cbm.jpeg" },
+      { "name": "Escritório da Beleza", "segment": "Salão de beleza", "file": "/escritorio-da-beleza.png" }
     ],
     "footerNote": "Atuamos ao lado de empresas dos setores de tecnologia, saúde, educação, produção audiovisual, alimentação, comércio e estruturas patrimoniais, mantendo o mesmo padrão de organização contábil e estratégia tributária."
   }
