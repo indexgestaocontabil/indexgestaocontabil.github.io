@@ -54,6 +54,11 @@
         "icon": "heart",
         "title": "Equipe Humanizada",
         "description": "Mais do que números, cuidamos de pessoas."
+      },
+      {
+        "icon": "shield",
+        "title": "Segurança Garantida",
+        "description": "Sua contabilidade sempre em dia, sem surpresas ou riscos fiscais."
       }
     ]
   },
