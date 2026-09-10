@@ -1,54 +1,61 @@
-import React from 'react';
-import Title from '../../components/Title/Title';
-import './ServicesPage.scss';
-import ServicesContent from './content.json';
+import {
+  FiFileText,
+  FiPercent,
+  FiUsers,
+  FiShield,
+  FiCompass,
+  FiCheck,
+} from 'react-icons/fi';
+import { IconType } from '../../types';
 import Hero from '../../components/Hero/Hero';
-import Tag from '../../components/Tag/Tag';
-import Folder from '../../components/Folder/Folder';
-import { PARAMS } from '../../globals';
+import ServicesContent from './content.json';
+import './ServicesPage.scss';
 
-const ServicesPage = () => {
-  const renderTagset = (activities: string[], index: number) => (
-    <div className="tagset">
-      {activities.map((activity, indexActivity) => (
-        <Tag
-          key={`service-${index}-activity-${indexActivity}`}
-          text={activity}
-        />
-      ))}
-    </div>
-  );
-
-  return (
-    <div className="services-page">
-      <Hero {...ServicesContent.hero} />
-
-      {ServicesContent.sections.map(
-        ({ title, description, activities }, index) => (
-          <section className="services-page-section" key={`service-${index}`}>
-            <Title
-              level={2}
-              content={title}
-              marginBottom={16}
-              subtitled={false}
-            />
-
-            <p className="services-page-section-description">{description}</p>
-
-            {PARAMS.VIEWPORT.IS_MOBILE ? (
-              <Folder
-                openTitle="Ver mais detalhes"
-                closeTitle="Ver menos detalhes"
-              >
-                {renderTagset(activities, index)}
-              </Folder>
-            ) : (
-              renderTagset(activities, index)
-            )}
-          </section>
-        )
-      )}
-    </div>
-  );
+const SECTION_ICONS: Record<string, IconType> = {
+  'Área Contábil': FiFileText,
+  'Área Tributária': FiPercent,
+  'Área Trabalhista': FiUsers,
+  'Legalização e Procuradoria': FiShield,
+  'Consultoria Empresarial e Tributária': FiCompass,
 };
+
+const ServicesPage = () => (
+  <div className="services-page">
+    <Hero {...ServicesContent.hero} />
+
+    {ServicesContent.sections.map(
+      ({ title, description, activities }, index) => {
+        const Icon = SECTION_ICONS[title] || FiFileText;
+        const isEven = index % 2 === 1;
+
+        return (
+          <section
+            className={`services-block ${isEven ? 'services-block-alt' : ''}`}
+            key={`service-${index}`}
+          >
+            <div className="services-block-heading">
+              <div className="icon-box">
+                <Icon />
+              </div>
+              <h2>{title}</h2>
+              <p>{description}</p>
+            </div>
+
+            <div className="services-block-activities">
+              {activities.map((activity, activityIndex) => (
+                <div
+                  className="activity-chip"
+                  key={`service-${index}-activity-${activityIndex}`}
+                >
+                  <FiCheck /> {activity}
+                </div>
+              ))}
+            </div>
+          </section>
+        );
+      }
+    )}
+  </div>
+);
+
 export default ServicesPage;
