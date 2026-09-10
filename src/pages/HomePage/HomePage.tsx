@@ -12,9 +12,7 @@ import './HomePage.scss';
 const HomePage = () => {
   SwiperCore.use([Autoplay, Navigation]);
 
-  const heroWhatsAppLink = getWhatsAppLink(
-    MEMBERS.Rossan.phone.replace(/\(|\)|\s|-/g, '')
-  );
+  const heroWhatsAppLink = getWhatsAppLink('7135997019');
 
   const renderHero = () => (
     <section className="home-hero">
