@@ -89,11 +89,15 @@ const AboutPage = () => (
 
           return (
             <div className="value-card" key={`value-${index}`}>
-              <div className="icon-box">
-                <Icon />
+              <div className="value-card-front">
+                <div className="icon-box">
+                  <Icon />
+                </div>
+                <h3>{label}</h3>
               </div>
-              <h3>{label}</h3>
-              <p>{description}</p>
+              <div className="value-card-back">
+                <p>{description}</p>
+              </div>
             </div>
           );
         })}
