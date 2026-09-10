@@ -1,45 +1,88 @@
-import React from 'react';
+import {
+  FiCompass,
+  FiEye,
+  FiShield,
+  FiAward,
+  FiUserCheck,
+  FiHeart,
+  FiTarget,
+  FiZap,
+  FiSmile,
+} from 'react-icons/fi';
+import { IconType } from '../../types';
 import Hero from '../../components/Hero/Hero';
-import './AboutPage.scss';
 import AboutContent from './content.json';
-import Title from '../../components/Title/Title';
-import Tag from '../../components/Tag/Tag';
 import { ReactComponent as Logo } from '../../assets/img/logo-dourada.svg';
+import './AboutPage.scss';
+
+const VALUE_ICONS: Record<string, IconType> = {
+  Ética: FiShield,
+  Excelência: FiAward,
+  Confiança: FiUserCheck,
+  Humanização: FiHeart,
+  Comprometimento: FiTarget,
+  Inovação: FiZap,
+  Humildade: FiSmile,
+};
 
 const AboutPage = () => (
   <div className="about">
     <Hero {...AboutContent.hero} />
-    <section className="about-us content-wrapper">
-      <div className="about-us-content">
-        {AboutContent.about.map((content, index) => (
-          <p key={`content-${index}`} className="about-us-content-paragraph">
-            {content}
-          </p>
+
+    <section className="about-section about-us">
+      <div className="about-us-text">
+        <span className="eyebrow">Sobre</span>
+        <h2>Conheça a INDEX Gestão Contábil</h2>
+
+        {AboutContent.about.map((paragraph, index) => (
+          <p key={`about-paragraph-${index}`}>{paragraph}</p>
         ))}
       </div>
 
-      <Logo className="logo" />
+      <div className="about-us-logo">
+        <Logo />
+      </div>
     </section>
 
-    <section className="about-mission content-wrapper">
-      <Title level={2} content="Nossa Missão" marginBottom={8} />
-      <p className="about-mission-content">{AboutContent.mission}</p>
+    <section className="about-section about-mission-vision">
+      <div className="mv-card">
+        <div className="icon-box">
+          <FiCompass />
+        </div>
+        <h3>Nossa Missão</h3>
+        <p>{AboutContent.mission}</p>
+      </div>
+
+      <div className="mv-card">
+        <div className="icon-box">
+          <FiEye />
+        </div>
+        <h3>Nossa Visão</h3>
+        <p>{AboutContent.vision}</p>
+      </div>
     </section>
 
-    <section className="about-vision content-wrapper">
-      <Title level={2} content="Nossa Visão" marginBottom={8} />
-      <p className="about-vision-content">{AboutContent.vision}</p>
-    </section>
+    <section className="about-section about-values">
+      <div className="about-section-heading">
+        <span className="eyebrow">Valores</span>
+        <h2>Nossos Valores</h2>
+        <p>{AboutContent.values.text}</p>
+      </div>
 
-    <section className="about-values content-wrapper">
-      <Title level={2} content="Nossos Valores" marginBottom={8} />
+      <div className="about-values-grid">
+        {AboutContent.values.tags.map(({ label, description }, index) => {
+          const Icon = VALUE_ICONS[label] || FiShield;
 
-      <p className="about-values-text">{AboutContent.values.text}</p>
-
-      <div className="tagset">
-        {AboutContent.values.tags.map(({ label, description }, index) => (
-          <Tag text={label} key={`tag-${index}`} tooltip={description} />
-        ))}
+          return (
+            <div className="value-card" key={`value-${index}`}>
+              <div className="icon-box">
+                <Icon />
+              </div>
+              <h3>{label}</h3>
+              <p>{description}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   </div>
