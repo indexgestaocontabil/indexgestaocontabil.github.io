@@ -150,16 +150,9 @@ const HomePage = () => {
           })}
         </div>
 
-        <a
-          className="btn btn-primary"
-          href={`${heroWhatsAppLink}?text=${encodeURIComponent(
-            Content.about.whatsappMessage
-          )}`}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <Link className="btn btn-primary" to="/sobre">
           {Content.about.saibaMaisLabel}
-        </a>
+        </Link>
       </div>
 
       <div className="home-about-card">
