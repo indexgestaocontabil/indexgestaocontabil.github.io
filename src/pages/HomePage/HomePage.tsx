@@ -77,6 +77,9 @@ const HomePage = () => {
         <span className="eyebrow">{Content.services.eyebrow}</span>
         <h2>{Content.services.title}</h2>
         <p>{Content.services.subtitle}</p>
+        <Link to="/servicos" className="home-section-link">
+          Ver todos os serviços <FiArrowRight />
+        </Link>
       </div>
 
       <div className="home-services-grid">
