@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-import FloatingWhatsApp from './components/FloatingWhatsApp/FloatingWhatsApp';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import { PARAMS } from './globals';
 import AboutPage from './pages/AboutPage/AboutPage';
 import ContactPage from './pages/ContactPage/ContactPage';
