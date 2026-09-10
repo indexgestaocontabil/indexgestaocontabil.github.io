@@ -58,17 +58,8 @@ const TeamPage = () => (
           className={`executive-block ${isEven ? 'executive-block-alt' : ''}`}
           key={member.id}
         >
-          {isEven ? (
-            <>
-              {info}
-              {photo}
-            </>
-          ) : (
-            <>
-              {photo}
-              {info}
-            </>
-          )}
+          {photo}
+          {info}
         </section>
       );
     })}
