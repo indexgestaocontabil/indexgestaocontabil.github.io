@@ -1,5 +1,6 @@
 import { GrInstagram, GrLinkedin } from 'react-icons/gr';
 import { AiOutlineWhatsApp, AiOutlineMail } from 'react-icons/ai';
+import { FiMapPin } from 'react-icons/fi';
 import ActionLink, {
   ActionLinkColorStyle,
 } from '../components/ActionLink/ActionLink';
@@ -10,6 +11,7 @@ import {
   getInstagramLink,
   getLinkedinLink,
   getWhatsAppLink,
+  getGoogleMapsLink,
 } from './utilitary-functions';
 
 type Options = {
@@ -62,6 +64,9 @@ export const renderInstagramActionLink = (
     getInstagramLink(account),
     options
   );
+
+export const renderAddressActionLink = (address: string, options?: Options) =>
+  renderActionLink(FiMapPin, address, getGoogleMapsLink(address), options);
 
 export const renderInstagramBoxLink = (account = ACCOUNTS.instagram) => {
   return (
