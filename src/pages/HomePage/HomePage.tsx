@@ -175,6 +175,9 @@ const HomePage = () => {
         <span className="eyebrow">{Content.team.eyebrow}</span>
         <h2>{Content.team.title}</h2>
         <p>{Content.team.subtitle}</p>
+        <Link to="/executivos" className="home-section-link">
+          Ver todos os executivos <FiArrowRight />
+        </Link>
       </div>
 
       <div className="home-team-grid">
@@ -186,7 +189,7 @@ const HomePage = () => {
             >
               <div className="team-card-photo-overlay">
                 <span className="name">{member.name}</span>
-                <span className="role">CEO</span>
+                <span className="role">Contador &amp; CEO</span>
               </div>
             </div>
           </div>
