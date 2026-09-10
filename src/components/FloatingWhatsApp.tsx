@@ -1,5 +1,5 @@
 import { FaWhatsapp } from 'react-icons/fa';
-import { getWhatsAppLink } from '../../utils/utilitary-functions';
+import { getWhatsAppLink } from '../utils/utilitary-functions';
 import './FloatingWhatsApp.scss';
 
 const COMPANY_PHONE = '(71) 3599-7019';
