@@ -2,14 +2,16 @@
 @import '../../placeholders';
 
 .footer {
-  @extend %df-aic-jsb;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 
   background-color: var(--theme-color-1);
   background-image: url('../../assets/img/wave.png');
   background-size: 100% $footer-height;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 12px $side-padding-desktop;
+  padding: 24px $side-padding-desktop;
   min-height: $footer-height;
 
   @media #{$breakpoint-mobile} {
@@ -32,9 +34,31 @@
       margin-bottom: 8px;
     }
 
+    .footer-address {
+      .action-link-wrapper {
+        align-items: flex-start;
+      }
+
+      .action-link-text {
+        display: inline-block;
+        max-width: 280px;
+        line-height: 1.4em;
+      }
+
+      .action-link-icon {
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+    }
+
     @media #{$breakpoint-phone} {
       margin-top: $base-spacing-large;
       padding-bottom: $base-spacing-large;
+
+      .footer-address .action-link-text {
+        max-width: 220px;
+        text-align: left;
+      }
     }
   }
 

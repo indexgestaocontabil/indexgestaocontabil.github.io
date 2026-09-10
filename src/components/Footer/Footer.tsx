@@ -17,7 +17,7 @@ const Footer = () => (
       {renderInstagramActionLink()}
       {renderEmailActionLink()}
       {renderWhatsAppActionLink('(71) 3599-7019')}
-      {renderAddressActionLink(ADDRESS)}
+      {renderAddressActionLink(ADDRESS, { className: 'footer-address' })}
     </div>
   </footer>
 );
