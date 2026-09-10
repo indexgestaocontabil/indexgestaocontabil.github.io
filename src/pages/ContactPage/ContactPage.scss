@@ -9,7 +9,7 @@
     grid-template-columns: 1fr 1.1fr;
     gap: 64px;
     padding: 88px $side-padding-desktop;
-    background: var(--theme-color-1);
+    background: #fff;
 
     @media #{$breakpoint-mobile} {
       grid-template-columns: 1fr;
@@ -19,7 +19,7 @@
   }
 
   .contact-info {
-    color: #fff;
+    color: #0f172a;
 
     .eyebrow {
       display: inline-block;
@@ -36,6 +36,7 @@
       font-family: $font-family-2;
       font-weight: 800;
       font-size: $font-size-7;
+      color: #0f172a;
       margin: 0 0 $base-spacing-small;
 
       @media #{$breakpoint-mobile} {
@@ -44,7 +45,7 @@
     }
 
     > p {
-      color: rgba(255, 255, 255, 0.75);
+      color: #55607a;
       margin: 0 0 $base-spacing-large * 1.5;
     }
 
@@ -66,7 +67,7 @@
           width: 44px;
           height: 44px;
           border-radius: 10px;
-          background: rgba(255, 255, 255, 0.08);
+          background: rgba(220, 171, 19, 0.15);
           color: var(--theme-color-2);
           font-size: 20px;
         }
@@ -76,12 +77,13 @@
           font-family: $font-family-2;
           font-weight: 700;
           font-size: $font-size-1;
+          color: #0f172a;
           margin-bottom: 2px;
         }
 
         a,
         .value {
-          color: rgba(255, 255, 255, 0.75);
+          color: #55607a;
           text-decoration: none;
           line-height: 1.5em;
         }
@@ -101,6 +103,7 @@
         font-family: $font-family-2;
         font-weight: 700;
         font-size: $font-size-1;
+        color: #0f172a;
       }
 
       .social-icon {
@@ -109,8 +112,8 @@
         width: 40px;
         height: 40px;
         border-radius: 10px;
-        background: rgba(255, 255, 255, 0.08);
-        color: #fff;
+        background: rgba(220, 171, 19, 0.15);
+        color: var(--theme-color-2);
         font-size: 18px;
         text-decoration: none;
         transition: background 0.2s ease, color 0.2s ease;
@@ -124,10 +127,9 @@
   }
 
   .contact-form-card {
-    background: #fff;
+    background: var(--theme-color-6);
     border-radius: 20px;
     padding: $base-spacing-large * 1.5;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 
     @media #{$breakpoint-mobile} {
       padding: $base-spacing-large;
