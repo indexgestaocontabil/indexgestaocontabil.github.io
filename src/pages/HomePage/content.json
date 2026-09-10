@@ -215,6 +215,16 @@
         "name": "Escritório da Beleza",
         "segment": "Salão de beleza",
         "file": "/escritorio-da-beleza.png"
+      },
+      {
+        "name": "Sued Nunes",
+        "segment": "Produção musical",
+        "file": "/sued-nunes.png"
+      },
+      {
+        "name": "Maraú Ecossistemas",
+        "segment": "Serviços de paisagismo",
+        "file": "/marau-ecossistemas.png"
       }
     ],
     "footerNote": "Atuamos ao lado de empresas dos setores de tecnologia, saúde, educação, produção audiovisual, alimentação, comércio e estruturas patrimoniais, mantendo o mesmo padrão de organização contábil e estratégia tributária."
