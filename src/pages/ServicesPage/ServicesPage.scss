@@ -1,30 +1,107 @@
-@import '../../vars';
 @import '../../placeholders';
-@import '../../index.scss';
+@import '../../vars';
 
 .services-page {
-  .header-wrapper {
-    padding-bottom: 0;
-  }
+  font-family: $font-family-1;
 
-  &-section {
-    @extend .content-wrapper;
+  .services-block {
+    padding: 88px $side-padding-desktop;
+    background: #fff;
 
-    &:nth-child(odd) {
+    @media #{$breakpoint-mobile} {
+      padding: 56px $side-padding-mobile;
+    }
+
+    &-alt {
       background: var(--theme-color-6);
     }
 
-    &-description {
-      margin-top: 0;
-      margin-bottom: $base-spacing-large + 4px;
-      line-height: 1.5em;
-      text-indent: 24px;
-    }
-  }
+    &-heading {
+      max-width: 760px;
+      margin: 0 auto 48px;
+      text-align: center;
 
-  @media #{$breakpoint-phone} {
-    .tag {
-      padding: 16px 12px;
+      .icon-box {
+        @extend %df-aic-jcc;
+
+        width: 60px;
+        height: 60px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--theme-color-2), #b9860a);
+        color: #22190a;
+        font-size: 26px;
+        margin: 0 auto $base-spacing-large;
+      }
+
+      h2 {
+        font-family: $font-family-2;
+        font-weight: 800;
+        font-size: $font-size-7;
+        color: #0f172a;
+        margin: 0 0 $base-spacing-medium;
+
+        @media #{$breakpoint-mobile} {
+          font-size: $font-size-2;
+        }
+      }
+
+      p {
+        font-size: $font-size-3;
+        color: #55607a;
+        line-height: 1.6em;
+        margin: 0;
+      }
+    }
+
+    &-activities {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: $base-spacing-medium;
+      max-width: 1100px;
+      margin: 0 auto;
+
+      @media #{$breakpoint-mobile} {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .activity-chip {
+        @extend %dif-aic-jcfs;
+
+        gap: $base-spacing-small;
+        background: #fff;
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        border-radius: 100px;
+        padding: 10px 18px;
+        font-size: $font-size-1;
+        font-weight: 600;
+        color: #384259;
+        transition: border-color 0.2s ease, color 0.2s ease,
+          background 0.2s ease;
+
+        svg {
+          color: var(--theme-color-2);
+          flex-shrink: 0;
+        }
+
+        &:hover {
+          border-color: var(--theme-color-2);
+          background: rgba(220, 171, 19, 0.08);
+        }
+      }
+    }
+
+    &.services-block-alt {
+      .services-block-activities .activity-chip {
+        background: var(--theme-color-1);
+        border-color: transparent;
+        color: #fff;
+
+        &:hover {
+          background: #10142b;
+        }
+      }
     }
   }
 }

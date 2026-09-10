@@ -5,10 +5,10 @@
     "subtitle": "Conheça um pouco mais sobre a Index, como realizamos nossas atividades e em que acreditamos."
   },
   "about": [
-    "Atuando desde 2012, a Index surgiu com o objetivo de oferecer um atendimento personalizado visando aprimorar a gestão de seu negócio, fornecendo informações contábeis confiáveis e tempestivas.",
-    "Ter a confiança dos clientes sempre foi a meta primordial de nossa organização, sejam pessoas físicas e jurídicas, inclusive estrangeiros, conduzindo os trabalhos de forma discreta e sigilosa.",
-    "Contamos com uma equipe dinâmica e qualificada para atender desde a abertura até o planejamento estratégico, fortalecendo as bases necessárias para a consolidação de empresas.",
-    "Executamos, de forma integrada, projetos com alto valor agregado, customizados para as necessidades e especificidades dos empresários, tendo o foco em micro, pequenas e médias empresas, dos mais variados ramos de atividade."
+    "A INDEX nasceu para ser mais do que execução contábil — ser um ponto de referência para decisões empresariais.",
+    "Atuamos de forma digital, com comunicação direta e acessível, mas sem abrir mão da proximidade. Você fala com quem resolve, recebe orientação clara e entende cada etapa do processo.",
+    "Nosso trabalho começa antes mesmo da abertura da empresa, estruturando o enquadramento tributário adequado e prevenindo problemas futuros. Acreditamos que empresas devem nascer organizadas para crescer com segurança.",
+    "Nosso compromisso não é apenas cumprir obrigações, mas contribuir para que cada cliente evolua de forma estruturada. Quando o cliente cresce, crescemos junto."
   ],
   "mission": "Contribuir para o crescimento dos nossos clientes oferecendo informações contábeis confiáveis para a melhor tomada de decisão.",
   "vision": "Tornar-se referência na área contábil, através da prestação de serviço com total transparência e compromisso com os nossos clientes.",
@@ -42,6 +42,31 @@
       {
         "label": "Humildade",
         "description": "Garantir o tratamento saudável com qualquer pessoa, sem que haja distinção. garantir um olhar flexivel e uma visão analitica para qualquer situação."
+      }
+    ]
+  },
+  "acrostic": {
+    "intro": "O nome INDEX reflete nossa forma de atuar:",
+    "items": [
+      {
+        "letter": "I",
+        "rest": "nformação para entender"
+      },
+      {
+        "letter": "N",
+        "rest": "egócio como visão"
+      },
+      {
+        "letter": "D",
+        "rest": "ecisão orientada"
+      },
+      {
+        "letter": "E",
+        "rest": "stratégia estruturada"
+      },
+      {
+        "letter": "X",
+        "rest": "is certeiro em cada solução"
       }
     ]
   }

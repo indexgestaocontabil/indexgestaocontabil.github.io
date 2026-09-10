@@ -1,6 +1,11 @@
 export const getWhatsAppLink = (phoneNumber: string) =>
   `https://wa.me/${phoneNumber}`;
 
+export const getGoogleMapsLink = (address: string) =>
+  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    address
+  )}`;
+
 export const getInstagramLink = (account: string) =>
   `https://www.instagram.com/${account}/`;
 
