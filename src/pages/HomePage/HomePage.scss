@@ -610,23 +610,56 @@
   .home-clients {
     background: #fff;
 
-    &-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: $base-spacing-large;
+    .home-clients-swiper {
+      padding-bottom: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
 
-      @media #{$breakpoint-mobile} {
-        grid-template-columns: repeat(2, 1fr);
+      .swiper-slide {
+        height: auto;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        color: var(--theme-color-2);
+        top: 40%;
+
+        &::after {
+          font-size: 22px;
+          font-weight: 700;
+        }
+      }
+
+      .swiper-button-disabled {
+        opacity: 0.25;
       }
     }
 
     .client-card {
       @extend %df-aic-jcc-fdc;
 
+      position: relative;
       text-align: center;
-      background: var(--theme-color-6);
-      border-radius: 16px;
-      padding: $base-spacing-large $base-spacing-medium;
+      background: transparent;
+      padding: $base-spacing-medium;
+      height: 100%;
+      cursor: default;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 20%;
+        right: 20%;
+        bottom: 0;
+        height: 2px;
+        background: var(--theme-color-2);
+        transform: scaleX(0);
+        transition: transform 0.25s ease;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+      }
 
       img {
         max-width: 100%;

@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import { FiCheck, FiArrowRight } from 'react-icons/fi';
+import SwiperCore, { Autoplay, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css';
 import Content from './content.json';
 import { MEMBERS } from '../../globals';
 import { getWhatsAppLink } from '../../utils/utilitary-functions';
@@ -7,6 +10,8 @@ import { getIconByName } from './icon-map';
 import './HomePage.scss';
 
 const HomePage = () => {
+  SwiperCore.use([Autoplay, Navigation]);
+
   const heroWhatsAppLink = getWhatsAppLink(
     MEMBERS.Rossan.phone.replace(/\(|\)|\s|-/g, '')
   );
@@ -206,15 +211,30 @@ const HomePage = () => {
         <p>{Content.clients.subtitle}</p>
       </div>
 
-      <div className="home-clients-grid">
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={24}
+        loop
+        grabCursor
+        navigation
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        breakpoints={{
+          0: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          960: { slidesPerView: 3 },
+        }}
+        className="home-clients-swiper"
+      >
         {Content.clients.logos.map((client, index) => (
-          <div className="client-card" key={`client-${index}`}>
-            <img src={client.file} alt={client.name} />
-            <span className="name">{client.name}</span>
-            <span className="segment">{client.segment}</span>
-          </div>
+          <SwiperSlide key={`client-${index}`}>
+            <div className="client-card">
+              <img src={client.file} alt={client.name} />
+              <span className="name">{client.name}</span>
+              <span className="segment">{client.segment}</span>
+            </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
 
       <p className="home-clients-footnote">{Content.clients.footerNote}</p>
     </section>
