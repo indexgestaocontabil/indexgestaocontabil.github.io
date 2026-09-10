@@ -4,7 +4,6 @@ import {
   renderInstagramActionLink,
   renderWhatsAppActionLink,
 } from '../../utils/utilitary-renders';
-import { MEMBERS } from '../../globals';
 import { ReactComponent as Logo } from '../../assets/img/logo-dourada.svg';
 
 const Footer = () => (
@@ -13,8 +12,7 @@ const Footer = () => (
     <div className="footer-contacts">
       {renderInstagramActionLink()}
       {renderEmailActionLink()}
-      {renderWhatsAppActionLink(MEMBERS.Rossan.phone, MEMBERS.Rossan.name)}
-      {renderWhatsAppActionLink(MEMBERS.Thiago.phone, MEMBERS.Thiago.name)}
+      {renderWhatsAppActionLink('(71) 3599-7019')}
     </div>
   </footer>
 );
