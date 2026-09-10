@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import {
   FiCompass,
   FiEye,
@@ -37,6 +38,19 @@ const AboutPage = () => (
         {AboutContent.about.map((paragraph, index) => (
           <p key={`about-paragraph-${index}`}>{paragraph}</p>
         ))}
+
+        <p className="acrostic-intro">{AboutContent.acrostic.intro}</p>
+        <p className="acrostic-line">
+          {AboutContent.acrostic.items.map((item, index) => (
+            <Fragment key={`acrostic-${index}`}>
+              <strong className="acrostic-letter">{item.letter}</strong>
+              {item.rest}
+              {index < AboutContent.acrostic.items.length - 2 && ', '}
+              {index === AboutContent.acrostic.items.length - 2 && ' e '}
+              {index === AboutContent.acrostic.items.length - 1 && '.'}
+            </Fragment>
+          ))}
+        </p>
       </div>
 
       <div className="about-us-logo">

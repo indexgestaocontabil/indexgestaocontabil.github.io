@@ -99,6 +99,21 @@
         line-height: 1.6em;
         margin: 0 0 $base-spacing-medium;
       }
+
+      .acrostic-intro {
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: $base-spacing-small;
+      }
+
+      .acrostic-line {
+        font-size: $font-size-3;
+      }
+
+      .acrostic-letter {
+        color: var(--theme-color-2);
+        font-size: 1.15em;
+      }
     }
 
     &-logo {
