@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { FiCheck, FiPhone, FiMail, FiArrowRight } from 'react-icons/fi';
+import { FiCheck, FiArrowRight } from 'react-icons/fi';
 import Content from './content.json';
 import { MEMBERS } from '../../globals';
 import { getWhatsAppLink } from '../../utils/utilitary-functions';
@@ -186,17 +186,8 @@ const HomePage = () => {
             >
               <div className="team-card-photo-overlay">
                 <span className="name">{member.name}</span>
-                <span className="role">Contador</span>
+                <span className="role">CEO</span>
               </div>
-            </div>
-            <div className="team-card-body">
-              <p>{member.about[0]}</p>
-              <a href={`tel:${member.phone.replace(/\(|\)|\s|-/g, '')}`}>
-                <FiPhone /> {member.phone}
-              </a>
-              <a href={`mailto:${member.email}`}>
-                <FiMail /> {member.email}
-              </a>
             </div>
           </div>
         ))}

@@ -568,10 +568,12 @@
       box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
 
       &-photo {
-        @extend %bsc-brnr-bpc;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
 
         position: relative;
-        height: 280px;
+        height: 380px;
 
         &-overlay {
           @extend %df-fdc-jcc-aifs;
@@ -583,7 +585,7 @@
           padding: $base-spacing-large;
           background: linear-gradient(
             to top,
-            rgba(13, 26, 108, 0.9),
+            rgba(22, 28, 64, 0.92),
             transparent
           );
 
@@ -596,37 +598,6 @@
 
           .role {
             font-size: $font-size-1;
-            color: var(--theme-color-2);
-          }
-        }
-      }
-
-      &-body {
-        padding: $base-spacing-large;
-
-        p {
-          color: #55607a;
-          margin: 0 0 $base-spacing-medium;
-          line-height: 1.5em;
-        }
-
-        a {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-
-          gap: $base-spacing-small;
-          color: #384259;
-          text-decoration: none;
-          font-size: $font-size-1;
-          margin-bottom: $base-spacing-small;
-
-          svg {
-            color: var(--theme-color-2);
-            flex-shrink: 0;
-          }
-
-          &:hover {
             color: var(--theme-color-2);
           }
         }
